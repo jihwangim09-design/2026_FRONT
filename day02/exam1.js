@@ -79,17 +79,3 @@ document.querySelector( "h3").innerHTML = "JS에서 대입한 자료"
 console.log( 결과2 )
 
 // 쉬는시간 마다 커밋/푸쉬
-
-
-
-
-
-
-
-
-
-
-
-
-
-
