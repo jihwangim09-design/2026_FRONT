@@ -29,3 +29,30 @@ document.write("메뉴 : " + foodname + "<br />");
 document.write("수량 : " + quantity + "<br />");
 
 */
+
+
+
+
+//- 문제2 사용자에게 이름과 오늘 한 운동 종류, 그리고 운동 시간(분) 을 순서대로 물어본 후, 입력된 정보를 바탕으로 콘솔에 오늘의 운동 기록을 보기 좋게 출력하는 프로그램을 만드세요.
+
+/*
+
+console.log("[운동 기록]");
+
+console.log("이름");
+let 이름 = prompt ( "성함을 적어주세요" )
+console.log( 이름 )
+console.log("")
+console.log("운동종류");
+let 운동 = prompt ( "어떤 운동을 하시나요?" )   
+console.log( 운동 )
+console.log("")
+console.log("운동시간");
+let 시간 = Number( prompt ( "운동을 얼마나 하시나요?" ) )
+console.log( 시간 )
+console.log("")
+console.log("칼로리");
+let 칼로리 = (시간 * 7)
+console.log( 칼로리 )
+
+*/
