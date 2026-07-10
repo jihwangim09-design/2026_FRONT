@@ -4,9 +4,13 @@
 
 //문제 1: 배열에서 최댓값 찾기
 //주어진 숫자 배열에서 가장 큰 값을 찾아 콘솔에 출력하는 프로그램을 작성하시오. (단, Math.max() 함수 사용 금지)
-
+let 최대값 = numbers[0]
 let numbers = [23, 5, 67, 12, 88, 34]; 
-
+for( i = 0 ; i <= numbers.length - 1 ; i ++){
+    if ( numbers[i] > 최대값 )
+        최대값 = numbers[i]
+}
+console.log(최대값)
 
 
 /*
