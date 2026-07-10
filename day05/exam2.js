@@ -179,20 +179,25 @@ console.log(A형)
 //강호동 ●●●●●●●●○○
 //신동엽 ●●●●●●●○○○  */
 
-let nameArray = ['유재석', '강호동', '신동엽']
-let scores = [92, 86, 72]
-let circle = ['','','']
-let html = '' // html에 출력할 문자열 저장하는 변수
-for(let i = 0; i < 3; i++){
-    let k = ( scores[i] - (scores[i] % 10) ) / 10
-    for( let j = 0; j < 10 ; j++ ){
-        if( j < k ) { circle[i] += '●'} //특수문자 윈도우 ㅁ+한자키
-        else { circle[i] += '○' }
-    }
-    html += `<p> ${ nameArray[i] } ${ circle[i] } </p>`
-    
-    document.querySelector("p").innerHTML = html // 출력
-}
-
+let nameArray = ['유재석' , '강호동' , '신동엽' ]
+let scores4 = [ 92 , 86 , 72 ]
+let html = `` // html에 출력할 문자열 저장하는 변수 
+// ㅁ+한자키 , ○ ●
+for( let index = 0 ; index <= nameArray.length - 1 ; index++ ){ // 3회전 
+    // 이름 대입 
+    html = html + nameArray[index]
+    // 점수 대입 
+    // html = html + scores4[index]
+    // 점수 도형으로 변경 , 점수에 나누기 10 했을때 10자리수 구하기.
+    for( let 도형수 = 1 ; 도형수 <= 10 ; 도형수++ ){            // 10회전 
+        if( scores4[index] / 10 > 도형수 ){ html = html + "●" }
+        else{ html = html + "○" }
+    } // for end 
+    // 이름 마다(1번 반복될때마다) 줄바꿈( br ) 대입 
+    html = html + "<br />"
+} // for end 
+document.querySelector( "p" ).innerHTML = html; // 출력 
+// 상위 for문이 1회 반복할때 마다 하위 for문은 전체 반복한다.
+// 3회전 * 10회전 => 30회전 
 
 // html = html + nameArray[index]; 이름마다 줄바꿈
