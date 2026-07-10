@@ -1,0 +1,20 @@
+-if
+    1. if( boolean ) code
+    2. if( boolean ) { code; code; }
+    3. if( boolean ) { code; }
+        else { code; }
+    4. if (boolean ){
+        code
+    }else if( boolean ){
+    }else if( boolean ){
+    }else{
+
+    }
+    5. if ( boolean ){}
+       if ( boolean ){}
+    6. if 
+        if( boolean ){
+            if ( boolean ){
+                
+            }
+        }
