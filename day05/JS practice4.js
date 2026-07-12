@@ -250,7 +250,27 @@ document.querySelector("p").innerHTML = html;
 
 let carNumbers = ['210어7125', '142가7415', '888호8888', '931나8234'];
 let usageMinutes = [65, 30, 140, 420];
+let html = ''
 
+for (i = 0; i <= carNumbers.length - 1; i++) {
+    
+    let 요금 = 0 
+    
+    if (usageMinutes[i] <= 30) {
+        요금 = 1000
+    } else {
+        요금 = 1000 + parseInt((usageMinutes[i] - 30) / 10) * 500
+    }
+    
+    if (요금 > 20000) {
+        요금 = 20000
+    }
+    
+    html = html + carNumbers[i] + ': ' + usageMinutes[i] + '분 주차, 최종 요금: ' + 요금 + '원' + '<br/>'
+    
+}
+
+document.querySelector( "p" ).innerHTML = html;
 
 
 
