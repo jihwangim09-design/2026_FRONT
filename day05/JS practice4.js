@@ -223,6 +223,8 @@ document.querySelector("p").innerHTML = html;
 
 */
 
+
+/*
 //문제 10: 주차 요금 정산하기
 //차량별 주차 시간 데이터가 주어졌을 때, 아래의 요금 규정에 따라 각 차량이 지불해야 할 최종 주차 요금을 계산하여 
 // HTML에 출력하는 프로그램을 작성하시오.
@@ -273,4 +275,4 @@ for (i = 0; i <= carNumbers.length - 1; i++) {
 document.querySelector( "p" ).innerHTML = html;
 
 
-
+*/
