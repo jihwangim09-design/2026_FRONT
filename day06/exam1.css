@@ -69,5 +69,13 @@ html > body > div > ol > li{ }
     text-align: center;             /*텍스트 가로정렬 : left center right */
     text-decoration: underline overline line-through ;
     /* underline : 밑줄 , overline 윗줄, line-through 취소선 */
-    text-shadow: ;
+    text-shadow: 5px 3px 5px blue;
+    /* x축(+오른쪽 -왼쪽) y축(+아래 -위)  흐림정도 색상 */
+    /* 색상 표현 방법 */
+    color : green; /* 방법1 : 색상명 */
+    color : rgb( 0, 255, 0 ); /* 방법2 : R(레드)G(그린)B(블루) 0~255 조합 */
+    color : rgba( 0, 255, 0, 0.8); /* a(알파) 투명도 */
+    color : #008000; /* 방법3 : 헥스코드(*백엔드 권장*) */
+
+
 }
