@@ -11,7 +11,12 @@ for( i = 0 ; i <= numbers.length - 1 ; i ++){
         최대값 = numbers[i]
 }
 console.log(최대값)
+
 */
+
+
+
+
 
 /*
 
@@ -80,6 +85,8 @@ for ( i = 0 ; i <= seatLayout.length-1 ; i++ ) {
 
 
 }
+
+
     
 */
 
