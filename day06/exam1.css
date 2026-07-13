@@ -1,1 +1,54 @@
 h5{ color: yellow; }
+/* CSS 주석 */
+/* (html)마크업에 스타일 적용 문법 */
+/*
+    선택자 { 속성명 : 속성값; 속성명 : 속성값 }
+    선택자 종류
+        1. * : 와일드카드(전체)
+        2. h4 : 특정마크업명
+        3. .className : 특정클래스명 지정 ( 복수 식별 )
+        4. #id : 특정아이디명 지정 ( 단일 식별 )
+    선택자 우선순위 (만약에 동일한 속성이 중복이면)
+    * < 특정마크업 < .className < #id < 인라인
+    만일 동일한 수준이면 아래에 구성한 CSS 적용 (위에서 아래로 흐름을 가지기 때문)
+    - <마크업 style="CSS문법"> 우선 적용된다.   
+
+
+    
+*/
+
+
+
+*{ color: brown; }
+h6{ color : aqua; }
+.구역1{ color : beige; }
+#구역2{ color : black; }
+#구역2{ color : tomato; }
+
+/* 자식선택자 : 상위선택자 > 자식선택자 */
+div > h3{ color: green; }
+/* 자손선택자 : 상위선택자 하위선택자 */
+div h3{ background-color: aqua ;}
+
+/* 복수선택자 : , 이용한 선택지 2개 이상 작성 */
+h3 , h4{ color: grey;}
+
+/* 다양한 선택자를 제공함으로써 중복을 방지
+html > body > div > ol > li{ }
+/* vs */
+#이름1{ }
+
+/* 누구를( 무엇을 : 어떻게; ) */
+/* 속성값 뒤로 ;(세미콜론) 닫는다(구분) */
+
+.title{
+    font-family: "궁서";            /*글꼴*/
+    font-size: 12px;               /*글자크기*/
+    font-style: italic;            /*글자기울기*/
+    font-weight: bold;             /*글자진한게*/
+}
+/*웹폰트*/  
+.본문구역{
+    font-family: ;
+}
+
