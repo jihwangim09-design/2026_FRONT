@@ -1,0 +1,17 @@
+.title{
+    font-family: "궁서";
+    font-style: italic;
+    
+
+}
+
+.본문구역{
+    font-family: "궁서";
+    font-size: 10px;
+    color : blue;
+    word-spacing:  17px;
+    letter-spacing: 6px;
+    font-weight: bold;
+
+
+}
