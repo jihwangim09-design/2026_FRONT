@@ -5,6 +5,15 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Page Title</title>
     <link rel='stylesheet' href='main.css'> <!-- CSS -->
+    <!-- CSS 방법2 -->
+    <style>
+        h4{ color : blue; }
+    </style>
+
+    <!-- CSS 방법3 -->
+    <link href="exam1.css" rel="stylesheet" />
+
+
 </head>
 <body>
     
@@ -13,11 +22,15 @@
     CSS : Cascading ( 위에서 아래로 흐름 ) StyleS ( 꾸미기 ) sheets (덮는)  EX 옷
             -> 위에서 아래로 (HTML) 꾸미기 시트를 덮는다.
     JS : 자바스크립트 프로그래밍 언어                                       EX 동적(이벤트)                   
---> 
-    <!-- CSS 적용하는 방법-->
+    --> 
+    <!-- CSS 적용하는 방법1 :인라인( 마크업내 style 속성 이용 )-->
+    <h3 style=" color : red; ">  CSS방법1  </h3>   <!-- h3 마크업 -->
 
+     <!-- CSS 적용하는 방법2 : <head> 마크업내 <style> 마크업 문법 -->
+    <h4> CSS방법2 </h4>
 
--->
-
+    <!-- CSS 적용하는 방법3 : .css문법 작성 하고 <head>  마크업에서 호출 -->
+    <h5> CSS 방법3 </h5>
+    
 </body>
 </html>
