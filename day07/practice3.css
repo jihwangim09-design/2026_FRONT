@@ -1,0 +1,10 @@
+.box1{
+    width: 10000px;
+    height: 10000px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 3px 3px 3px red;
+    margin: 0 auto;
+    background-color: black;
+
+}
