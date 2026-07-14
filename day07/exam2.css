@@ -25,7 +25,7 @@
 
 }
 .img1{ width: 100px; } /*이미지 사이즈 조정*/
-.box2{ text-align: center; } /* 구역내 입력상자 가로 정렬 */
+.box2{ text-align: center; } /* 구역내 입력상자 가로 정렬 구역안에 내용을 가운데로 정렬 */
 /* 자식선택자 > */
 .box2  > input{ 
     width: 100px;  height: 30px;
@@ -40,6 +40,15 @@
 .box4{
     padding: 10px 15px 20px 25px ; /* 위,오른쪽,아래,왼쪽 순서 */
     margin: 10px 20px ; /* 위/아래 , 왼/오른쪽 */
+}
+
+.box5{
+    margin: 0 auto;                         /* 바깥여백을 왼/오른쪽을 auto 설정 본인을 가운데로 설정 */ 
+    width: 50px;                            /* 가로 사이즈, 주의할점 : 생략시 100% */
+    text-align: center;                     /* 구역내 컨텐츠 가로 정렬 */
+    color : red;                          /* 글꼴 색상 */
+    background-color:  beige;             /* 구역 배경 색상 */
+    
 }
 
 
