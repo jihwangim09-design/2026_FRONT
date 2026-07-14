@@ -13,3 +13,8 @@ console.log( 객체변수2 )
 // [4] 객체내 속성 호출 , .(점/도트)연산자, 왼쪽자료의 참조()
 console.log( 객체변수2.속성명1 )
 console.log( ) // console 객체네 log 함수 호출
+console.log( 객체변수2.속성명2 )
+console.log( Object.keys ( 객체변수2 ) )        //객체네 모든 속성명 (배열)출력
+console.log( Object.values ( 객체변수2 ) )      //객체네 모든 속성값 (배열)출력
+console.log( Object.entries ( 객체변수2 ) )     //객체네 모든 속성명/값 (배열)출력
+
