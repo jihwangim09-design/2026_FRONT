@@ -1,1 +1,41 @@
-.img1{ width: 300px;}
+.img1{ width: 300px; }
+
+.int{ 
+    color:burlywood;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.textyellow{
+    color: burlywood;
+}
+
+.box1{ 
+    width: 450px;
+    background-color: rgb(2, 69, 124);
+    height: 90px;
+    color: white;
+    padding: 15px;
+}
+
+.int1{ 
+    color:burlywood;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.box2{ 
+    width: 450px;
+    background-color: rgb(2, 69, 124);
+    height: 90px;
+    color: white;
+    padding: 15px;
+}
+
+
+
+
+
+
