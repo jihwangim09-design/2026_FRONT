@@ -25,13 +25,13 @@ const 수강신청내역 = [
 
 // 그냥 이름만 출력 console.log( 학생[1].name)
 //수강신청내역추가
-let 학생id = Number(prompt('학생 id를 입력하세요 (1~3)'));
-let 신청과목id = Number(prompt('신청과목 id를 입력하세요 (1~3)'));
+let 입력학생id = Number(prompt('학생 id를 입력하세요 (1~3)'));
+let 입력과목id = Number(prompt('신청과목 id를 입력하세요 (1~3)'));
 
 수강신청내역.push ({
     수강신청내역기록id: 수강신청내역.length + 1,
-    이름:  학생id,
-    교과목id: 신청과목id,
+    학생id:  입력학생id,
+    교과목id: 입력과목id,
 })
 
 for (let i = 0; i <= 수강신청내역.length - 1; i++) {
