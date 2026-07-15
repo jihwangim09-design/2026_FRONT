@@ -140,7 +140,7 @@ let html = `<table>
 
         <tr/>
         ` // html 구성할 변수
-for ( let index = 0 ; index <= data.length - 1 ; data++) {
+for ( let index = 0 ; index <= data.length - 1 ; index++) {
     let 동별객체 = data[index]; // index번째 동별 객체 꺼내기 ( 순회 : 여러개/배열내 요소/자료 하나씩 반복하여)
     // 주의할점 : 반복문 안에서 변수 선언( let/const )하면 반복되면서 선언/초기화
     html += `<tr>
