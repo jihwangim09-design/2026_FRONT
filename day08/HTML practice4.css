@@ -12,8 +12,17 @@
     width: 300%; 
 }
 
+.text{
+    padding-left: 10px;
+}
+
 .text3{
     font-size: 14px;
+}
+
+.review{
+    padding-bottom: 10px;
+    
 }
 
 .yellowtext{
@@ -21,6 +30,8 @@
 }
 
 
+
 .yellowtext1{
-    color: rgb(255, 167, 2)
+    color: rgb(255, 167, 2);
+    
 }
