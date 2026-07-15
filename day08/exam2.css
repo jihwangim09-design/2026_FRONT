@@ -1,0 +1,37 @@
+* { border: 1px solid red; }
+.box{ width: 100px;}
+
+/* display : flex */
+.flexbox1{ 
+    display: flex; /* 하위 요소들 가로배치 방법 */
+    width: 250px;
+    flex-wrap: nowrap; /* 만약에 하위요소들의 크기가 구역보다 커지면 하위요소 자동 크기 조정*/
+
+    
+}
+
+.flexbox2{ 
+    display: flex; 
+    width: 250px;
+    flex-wrap: wrap; /* 만약에 하위요소들의 크기가 구역보다 커지면 자동 줄바꿈 조정*/
+
+    
+}
+
+.flexbox3{ 
+    display: flex; 
+    flex-direction: row; /* 생략시 row는 기본값임 기본값이 가로배치 */
+
+}
+
+.flexbox4{ 
+    display: flex; 
+    flex-direction: column; /* 하위요소들 세로 배치 */
+
+}
+
+
+
+
+
+
