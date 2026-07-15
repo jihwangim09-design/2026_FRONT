@@ -11,13 +11,14 @@
 .box1{
     width: 160px;
     height: 20px;
-    border-radius: 10px;
+    border-radius: 13px;
     text-align: center;
     border: 1px solid white;
     padding-top: 4px;
     margin-top: 10px;
     margin-left: 20px;
     margin-right: px;
+    
     
 }
 
@@ -41,37 +42,36 @@
     width: 170px;
     height: 35px;
     background-color: rgb(88, 211, 211);
-    
+    text-align: center;
     margin-left: 14px;
     margin-top: 7px;
     border-radius: 5px;
+    text-align: center;
 }
 
 .text3{
     text-align: center;
     color: white;
     font-size: 10px;
-    padding-left: 72px;
 }
 
 .text4{
     text-align: center;
     color: white;
     font-size: 10px;
-    padding-left: 63px;
 }
 
 .text5{
     text-align: center;
     color: white;
     font-size: 10px;
-    padding-left: 67px; 
+    
 }
 .box3{
     width: 170px;
     height: 35px;
     background-color: rgb(88, 211, 211);
-    
+    text-align: center;
     margin-left: 14px;
     margin-top: 7px;
     border-radius: 5px;
@@ -84,4 +84,5 @@
     margin-left: 14px;
     margin-top: 7px;
     border-radius: 5px;
+    text-align: center;
 }
