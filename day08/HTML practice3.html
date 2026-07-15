@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <link rel='stylesheet' href='HTML practice3.css'>
+    <!-- CSS파일 호출 하기 , href에 파일명 지정하고 컨트롤(ctrl) + 클릭 -> 파일 생성  -->
+    <link rel='stylesheet' href='HTML practice3.css' />
 </head>
 <body>
-<div class="box1"> <!-- 로그인 구역 감싼-->
-<h2 > 로그인 </h2> <!-- 제목 -->
 
-<input type="text" placeholder="사용자 아이디" class="text1" > <!-- 입력상자 -->
-<input type="password" placeholder="비밀번호" class="text2" > <!-- 입력상자 -->
+    <!-- HTML 먼저 구성 *권장 -->
+    <div> <!-- 로그인 구역 감싼 -->
+        
+        <h3> 로그인 </h3> <!-- 제목 -->
+        
+        <input type="text" placeholder="사용자 아이디"/> <!-- 입력상자 -->
+        <br>
+        <input type="password" placeholder="비밀번호"/>
+        <br>
+    
+        <button type="button"> 로그인 </button> <!-- 버튼 -->
 
-<button type="button"> </button>
-
-
-
-
-
-
-
+        <div> 
+            계정이 없으신가요? 
+            <a>회원가입</a> 
+        </div>
+        
+    </div>
+    
 </body>
 </html>
