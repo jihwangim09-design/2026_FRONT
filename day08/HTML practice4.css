@@ -1,0 +1,26 @@
+.title{
+    width: 300px;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+
+.image{
+    width: 100px;
+}
+
+.image > img {
+    width: 300%; 
+}
+
+.text3{
+    font-size: 14px;
+}
+
+.yellowtext{
+    color: rgb(255, 167, 2)
+}
+
+
+.yellowtext1{
+    color: rgb(255, 167, 2)
+}
