@@ -176,7 +176,7 @@ for( let i = 0 ; i <= movies.length - 1 ; i++) {
 console.log ( movieTitles )
 */
 
-
+/*
 //문제 7: 데이터 그룹화하기
 //다음 team 배열을 department를 기준으로 그룹화하여, 아래 result와 같은 형태로 만드시오.
 const team = [
@@ -186,32 +186,50 @@ const team = [
 { name: '지혜', department: '기획팀' }
 ];
 //최종 결과 형태 (result)
-{
-'개발팀': ['철수', '민수']
-'기획팀': ['영희', '지혜']
-}
-const result = [ ]
-for ( let i = 0; i <= team.length - 1; i++) {
-    if ( team[i].department == '개발팀')
-
-}
-
-
-
+//{ '개발팀': ['철수', '민수'] '기획팀': ['영희', '지혜'] }
+const result = [ ] // 1. 새롭게 구성할 빈 객체 선언 // { '개발팀': ['철수', '민수'] '기획팀': ['영희', '지혜'] }
+for ( let i = 0; i <= team.length - 1; i++) { // 2. team 배열을 순회
+        if( team[i].department in result ) { //'속성명' in 객체 ,  객체내 특정속성 존재여부 true / false
+            // 존재하면 배열에 추가 , push
+            result[team[i].department].push = team[i].name // result(새로운)객체내 이름을 배열에 추가한다.
+    }else{ // 배열 ( 새롭게 ) 구성  , = [ ] 초기화
+           // + 만일 속성명이 특수문자 또는 변수명으로 구성된 경우 .(점) 대신 [](대괄호)
+           // + 주의할점 : 배열의 [ ] 와 객체의 [ ] 구분, 배열[인덱스번호] vs 객체 [속성명문자]
+           // result.team[index].department = [team[index].name]
+               result[team[i].department] = [ team[i].name ]
+} //for end
+} 
+console.log (result)
 */
 
-/* 문제 8: 장바구니 총액 계산하기
-고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
-cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
-productsInfo 배열: 각 요소는 상품의 고유 id와 price(가격)를 가집니다.
-cart 배열을 기준으로, 장바구니에 담긴 모든 상품의 총 결제 금액을 계산하여 콘솔에 출력하세요.
+
+
+/*
+//문제 8: 장바구니 총액 계산하기
+//고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
+//cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
+//productsInfo 배열: 각 요소는 상품의 고유 id와 price(가격)를 가집니다.
+//cart 배열을 기준으로, 장바구니에 담긴 모든 상품의 총 결제 금액을 계산하여 콘솔에 출력하세요.
 const cart = [{ id: 1, quantity: 2 },{ id: 3, quantity: 1 }];
 const productsInfo = [
 { id: 1, price: 1000 },
 { id: 2, price: 5000 }, // 장바구니에 없는 상품
 { id: 3, price: 2500 }
 ];
-
+// cart내 저장된 id를 productsinfo에 찾아 동일하면 quantity * price 곱하고 총합계 구하기
+let 총금액 = 0
+for ( let index = 0 ; index <= cart.length-1; index++ ) {// 1. cart내 모든 id 조회한다.
+    let product = cart[index].id; // 2. index번째의 객체(product) 꺼내기
+    // 3. productsinfo 에서 index번쨰의 id와 동일한 제품 id를 찾는다.
+    for( let index2 = 0 ; index2 <= productsInfo.length - 1 ; index2++ ) {
+        let info = productsInfo[index2] // 4. index2번째의 객체(info) 꺼내기
+        // 5. 만약에 cart객체와 info객체가 id가 같다면
+        if( product.id == info.id ){
+            총금액 += product.quantity * info.price; // 6. cart객채네 수량과 info객체내 가격 곱한다.
+        }
+    }
+}
+console.log( 총금액 ) //4500
 */
 
 
