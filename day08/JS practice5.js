@@ -8,6 +8,13 @@ let 금액 = Number( prompt ('가격') )
 let 상품회사 = prompt ('제조사')
 const product = { 제품명: 상품명, 가격: 금액 + '원' , 제조사: 상품회사}
 console.log( product )
+
+// 2. 객체{ 속성명 : 속성값 , 속성명 : 속성값 } 여러자료들을 속성명 구분
+// vs 배열[ 값, 값, 값 ] 여러자료들을 인덱스구분
+let product = { 제품명 , 가격 , 제조사 } // vs { '제품명' : 제품명 } , '가격' : 가격, '제조사' : 제조사 }
+// 입력받은 제품명이 저장된 변수를 객체네 속성값으로 구성 // 모든 자료들은 변수/상수 저장 가능
+// ++ 만약에 속성명과 속성값의 변수명이 같다면 , 속성명 생략 가능!
+let product = { 제품명, 가격 , 제조사 } 
 */
 
 /*
@@ -31,7 +38,6 @@ for ( i = 0; i <= members.length - 1 ; i++){
     break;
 
 }
-
 if (존재하는id) {
     console.log( '존재하는 아이디 입니다' )   
 }
@@ -42,6 +48,29 @@ else {  members.push({
 })
 console.log (members)
 };
+
+
+ㄱㅅㄴ
+let 아이디 = prompt ('아이디')
+let 비밀번호 = prompt ('비밀번호')
+let 이름 = prompt ('이름')
+let member = { 'id' : 아이디 , 'password' : 비밀번호 , 'name' : 이름 } // 배열내 저장된 기존 객체들과 동일한 속성으로 구성
+// + 만일 members(배열)내 입력받은 id가 존재하면 , 주의할점 : 배열내 객체의 특정값을 조회 -> 배열내 객체를 하나씩 조회
+// + 반복문 이용하여 특정한 조건을 충족했다 안했다. 확인변수 = 스위치 변수
+let 중복체크 = false // false 저장하는 변수
+for( let index = 0; index <= members.length - 1 ; index++) { //
+    let 객체 = members[ index ] ; // members배열내 index번째의 객체 꺼내기
+    if( 객체.id == member.id ){ //만약에 index번째 객체의 아이디와 입력받은 아이디 와 같다면
+        중복체크 = true
+        break; // 가장 가까운 반복문 탈출
+    
+    }// 주의할점 : 반복문이 끝날때 까지 모든 배열내 객체 조회 , 첫번째 객체내 아이디가 같지 않더라도 뒤에 있는 객체가 같을 수 있다.
+    그래서 else{ } 쓰지마라
+}  //for end //반복문 종료되고
+  if (중복체크 == true ){ console.log('이미 사용중인 아이디 입니다.'); }
+  else{ console,log('등록했습니다.'); members.push( member ); } 
+
+
 */
 
 
@@ -62,10 +91,12 @@ for ( i = 0 ; i <= scores.length - 1 ; i++ ){
 console.log( sum / 3 )
 */
 
-/*
+
 //문제 4: 특정 조건을 만족하는 객체 찾기
 //products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오.
 //일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
+
+console.log( 'dk')
 const products = [
 { id: 1, name: '사과' },
 { id: 2, name: '바나나' },
@@ -74,15 +105,20 @@ const products = [
 ];
 let 찾을객체 = 0
 
-for ( i = 0 ; i <= products - 1; i++) {
-    if (products[i].id === 3 )
-        찾을객체 = 1
+for ( let i = 0 ; i <= products.length - 1; i++) {
+    if (products[i].id === 3 ) {
+        찾을객체 = products[i];
     break;
+    }
 }
 if (찾을객체) {
-
+    console.log( 찾을객체 );
 }
-*/
+else { 
+    console.log ('상품을 찾을 수 없습니다')
+}
+
+
 
 /*문제 5: 객체 배열 필터링하기
 
