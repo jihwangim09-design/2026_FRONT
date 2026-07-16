@@ -202,9 +202,9 @@ for ( let i = 0; i <= team.length - 1; i++) { // 2. team 배열을 순회
 console.log (result)
 */
 
-
-
 /*
+
+
 //문제 8: 장바구니 총액 계산하기
 //고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
 //cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
@@ -219,7 +219,7 @@ const productsInfo = [
 // cart내 저장된 id를 productsinfo에 찾아 동일하면 quantity * price 곱하고 총합계 구하기
 let 총금액 = 0
 for ( let index = 0 ; index <= cart.length-1; index++ ) {// 1. cart내 모든 id 조회한다.
-    let product = cart[index].id; // 2. index번째의 객체(product) 꺼내기
+    let product = cart[index]; // 2. index번째의 객체(product) 꺼내기
     // 3. productsinfo 에서 index번쨰의 id와 동일한 제품 id를 찾는다.
     for( let index2 = 0 ; index2 <= productsInfo.length - 1 ; index2++ ) {
         let info = productsInfo[index2] // 4. index2번째의 객체(info) 꺼내기
@@ -230,18 +230,23 @@ for ( let index = 0 ; index <= cart.length-1; index++ ) {// 1. cart내 모든 id
     }
 }
 console.log( 총금액 ) //4500
+
 */
 
-
-/* 문제 9: 투표 결과 집계하기
-
-다음 votes 배열은 투표 결과를 나타냅니다. 각 후보가 몇 표를 받았는지 집계하여, 후보의 이름이 키이고 득표수가 값인 객체를 만들어 콘솔에 출력하시오.
-
+//문제 9: 투표 결과 집계하기
+//다음 votes 배열은 투표 결과를 나타냅니다. 각 후보가 몇 표를 받았는지 집계하여, 
+//후보의 이름이 키이고 득표수가 값인 객체를 만들어 콘솔에 출력하시오.
+//출력 예시: { A: 3, B: 3, C: 1 }
 const votes = ['A', 'B', 'B', 'C', 'A', 'B', 'A'];
-
-출력 예시: { A: 3, B: 3, C: 1 }
-
-*/
+const result = { }
+for ( let index = 0 ; index <= votes.length-1 ; index++) {// 2. 투표 결과를 조회한다.
+    if( votes[index] in result ) {// 3. index번째 값으로 result 객채내 속성명이 존재하면
+        result[ votes[index] ] += 1 // 4. 해당 속성명에 득표수가 1 증가 한다.
+    }else{
+        result[ votes[index] ] = 1; // 5. 존재하지 않으면 득표수 1 으로 초기화한다.
+    } 
+}
+console.log ( result )
 
 
 /* 문제 10: 웹툰 평점 시각화하기
