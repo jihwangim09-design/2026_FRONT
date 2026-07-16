@@ -88,15 +88,24 @@ sum = 0;
 for ( i = 0 ; i <= scores.length - 1 ; i++ ){
     sum += scores[i].math
 }
-console.log( sum / 3 )
+console.log( sum / scores.length )
+
+ㄱㅅㄴ
+// ++ 반복문은 배열내 모든 자료들을 하나씩 순회/조회
+let 총점수 = 0;
+for(let index = 0 ; index <= scores.length - 1 ; i++) {
+    let 점수 = scores[ index ] // index번째의 점수객체 꺼내기
+    총점수 += 점수.math // 점수객체내 math 속성값을 총점수에 더한다.
+}
+console.log ( 총점수 / scores.length ) // 배열.length : 배열내 자료개수 반환ㄴ
 */
 
 
+/*
 //문제 4: 특정 조건을 만족하는 객체 찾기
 //products 배열에서 id가 3인 상품 객체를 찾아, 해당 객체 전체를 콘솔에 출력하시오.
 //일치하는 객체가 없으면 "상품을 찾을 수 없습니다."를 출력합니다.
 
-console.log( 'dk')
 const products = [
 { id: 1, name: '사과' },
 { id: 2, name: '바나나' },
@@ -104,7 +113,6 @@ const products = [
 { id: 4, name: '딸기' }
 ];
 let 찾을객체 = 0
-
 for ( let i = 0 ; i <= products.length - 1; i++) {
     if (products[i].id === 3 ) {
         찾을객체 = products[i];
@@ -118,90 +126,90 @@ else {
     console.log ('상품을 찾을 수 없습니다')
 }
 
+ㄱㅅㄴ
+// 문제2와 동일하게 배열내 특정 객체의 속성값 조회시 모든 배열을 조회 해야한다.
+let find = false;  // 메모지 역할 처럼 조건을 찾았다 못찾았다 기록 변수
+for ( let i = 0 ; i <= products.length - 1; i++) {
+    if (products[i].id === 3 ) {
+    find = true; 
+    console.log( products[i] ) 
+    break; } // 찾았으면 반복문 종료
+    // else는 다음 index에 존재할 수 있으므로 상품 못찾은게 아니다.
+    }
+}
+if (find == false ){console.log( '상품을 찾을 수 없습니다.'); }
+*/
 
 
-/*문제 5: 객체 배열 필터링하기
-
-users 배열에서 isActive가 true인 사용자들만으로 구성된 새로운 배열 activeUsers를 만들고, 이 배열을 콘솔에 출력하시오.
-
+/*
+//문제 5: 객체 배열 필터링하기
+//users 배열에서 isActive가 true인 사용자들만으로 구성된 새로운 배열 activeUsers를 만들고, 
+//이 배열을 콘솔에 출력하시오.
+const activeUsers = [ ]
 const users = [
-
 { id: 1, name: '유저1', isActive: true },
-
 { id: 2, name: '유저2', isActive: false },
-
 { id: 3, name: '유저3', isActive: true },
-
 { id: 4, name: '유저4', isActive: false }
-
 ];
+for ( let i = 0 ; i <= users.length -1 ; i++) {
+    if( users[i].isActive == true )
+        activeUsers.push(users[i].name)
+}
 
+console.log ( activeUsers )
 */
 
-/*문제 6: 객체 배열 데이터 변환하기
 
-movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오.
-
+/*
+//문제 6: 객체 배열 데이터 변환하기
+//movies 배열에 있는 각 영화 객체에서 title 속성만 추출하여, 영화 제목들로만 이루어진 새로운 배열 movieTitles를 만들고 콘솔에 출력하시오.
 const movies = [
-
 { title: '인셉션', director: '크리스토퍼 놀란' },
-
 { title: '기생충', director: '봉준호' },
-
 { title: '매트릭스', director: '워쇼스키 자매' }
-
 ];
-
+const movieTitles = [ ]
+for( let i = 0 ; i <= movies.length - 1 ; i++) {
+    movieTitles.push( movies[i].title)
+}
+console.log ( movieTitles )
 */
 
-/*문제 7: 데이터 그룹화하기
 
-다음 team 배열을 department를 기준으로 그룹화하여, 아래 result와 같은 형태로 만드시오.
-
+//문제 7: 데이터 그룹화하기
+//다음 team 배열을 department를 기준으로 그룹화하여, 아래 result와 같은 형태로 만드시오.
 const team = [
-
 { name: '철수', department: '개발팀' },
-
 { name: '영희', department: '기획팀' },
-
 { name: '민수', department: '개발팀' },
-
 { name: '지혜', department: '기획팀' }
-
 ];
-
-최종 결과 형태 (result)
-
+//최종 결과 형태 (result)
 {
-
-'개발팀': ['철수', '민수'],
-
+'개발팀': ['철수', '민수']
 '기획팀': ['영희', '지혜']
+}
+const result = [ ]
+for ( let i = 0; i <= team.length - 1; i++) {
+    if ( team[i].department == '개발팀')
 
 }
+
+
 
 */
 
 /* 문제 8: 장바구니 총액 계산하기
-
 고객의 장바구니 정보를 담은 cart 배열과 상품 정보를 담은 productsInfo 배열이 있습니다.
-
 cart 배열: 각 요소는 고객이 담은 상품의 id와 quantity(수량)를 가집니다.
-
 productsInfo 배열: 각 요소는 상품의 고유 id와 price(가격)를 가집니다.
-
 cart 배열을 기준으로, 장바구니에 담긴 모든 상품의 총 결제 금액을 계산하여 콘솔에 출력하세요.
-
 const cart = [{ id: 1, quantity: 2 },{ id: 3, quantity: 1 }];
-
 const productsInfo = [
-
 { id: 1, price: 1000 },
-
 { id: 2, price: 5000 }, // 장바구니에 없는 상품
-
 { id: 3, price: 2500 }
-
 ];
 
 */
