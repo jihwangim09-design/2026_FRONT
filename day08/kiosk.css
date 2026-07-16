@@ -1,0 +1,13 @@
+*{
+    border: solid 1px red;
+}
+
+.flexbox8{
+    display: flex;          /* 하위요소들 배치 방법 */
+    justify-content: center;
+}
+
+.box1{
+    display: flex;
+    justify-content: space-between;
+}
