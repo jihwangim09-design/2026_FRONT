@@ -41,17 +41,29 @@ function findLongestWord ( words ) {
 findLongestWord(words)
 */
 
+/*
 //실습 4: 게임 점수 관리하기
 //let userScore = 0; 전역 변수를 만드세요. gainScore() 함수는 userScore를 10 증가시키고, loseScore() 함수는 5 감소시킵니다.
 //gainScore()를 세 번, loseScore()를 한 번 호출한 뒤, 최종 점수를 콘솔에 출력하세요.
 let userScore = 0;
+function gainScore ( ) {
+    userScore+=10
+}
+function loseScore ( ) {
+    userScore-=5
+}
+gainScore()
+gainScore()
+gainScore()
+loseScore()
+loseScore()
+console.log (userScore)
+*/
 
 
 
-/*실습 5: 최고 점수 학생 찾기
-
-전역변수 students 배열 데이터를 이용하여 , 가장 높은 점수(score)를 가진 학생의 이름을 찾아 반환하는 findTopStudent 함수를 만드세요.
-
+//실습 5: 최고 점수 학생 찾기
+//전역변수 students 배열 데이터를 이용하여 , 가장 높은 점수(score)를 가진 학생의 이름을 찾아 반환하는 findTopStudent 함수를 만드세요.
 const students = [
 
   { name: '김철수', score: 85 },
