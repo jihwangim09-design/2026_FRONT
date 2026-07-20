@@ -1,0 +1,54 @@
+/* 모든 선택자 , border : 테두리 */
+*{ border: 1px solid red; }
+
+/* #id선택자 */
+#wrap{
+    width: 1280px;  /* 웹 표준 가로 크기 1280px */
+    margin: 0 auto; /* 구역 가로 가운데 */
+}
+
+#header{height: 100px;}
+
+#main{
+    display: flex;  /* 본문과 사이드바 가로배치*/ /*해당 하위요소들을 가로 배치 방법 = flex */
+    flex-wrap: nowrap; /* 만일 하위요소들이 부모 요소보다 커지면 자동맞춤 */
+    justify-content: space-between; /* 하위 요소 양끝여백없이 균등정렬 */
+  
+}
+
+#main > #content{ width: 840px; height: 500px; }
+#main > #sidebar{ width: 420px; height: 500px; }
+
+#footer{ height: 50px;}
+/* height 주로 내용물 만큼 사용하므로 직접 지정 하지 않는다 */
+
+.parent{ width: 500px; font-size: 20px;}
+/* 1. px(픽셀) : 화면 구성하는 가장 작은 점 , 절대값임 , 부모 상관없음 */
+.px{
+    width: 200px; /* 부모요소500px 중 200px */
+    font-size: 16px;
+    background-color: skyblue;
+}
+/* 2. %(백분) : 자신이 속한 부모 요소의 크기를 기준으로 상대값 , 반응형웹 */
+/* width: , height 속성들은 기본값이 100% */
+.percent{
+    width: 50%; /* 부모요소 500px 중 50% -> 250px */
+    font-size: 16px;
+    background-color: green;
+}
+/* 3. rem : 자신이 속한 부모 요소와 상관없이 HTML 뿌리 요소 비례하여 상대값 */
+.rem{
+    font-size: 1.5rem; /* HTML 루트 폰트크기 16px -> 1.5(150%) -> 24px */
+}
+
+/* 4. vw/vh : 자신이 속한 부모 요소와 상관없이 디바이스(브라우저창)에 비례하여 상대값, 반응형 웹 */
+.vw{
+    width: 60vw; /* 브라우저장 가로로 늘렸다 줄였다하면 얘도 같이 움직임, 60%차지하는 가로 사이즈 */ 
+    background-color: orange;
+}
+
+.vh{
+    width: 200px;
+    height: 30vh;
+    background-color: pink; /* 브라우저장 세로로 늘렸다 줄였다하면 얘도 같이 움직임, 60%차지하는 가로 사이즈 */
+}
