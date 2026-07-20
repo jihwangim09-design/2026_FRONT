@@ -1,0 +1,23 @@
+/* 전체 레이아웃 확인 => 추후에 완성후 제거 예정*/
+*{ border: 1px solid red;}
+
+#header{
+    width: 1280px; /* 가로 구역 사이즈 */
+    margin: 0 auto; /* 구역 가로 가운데 정렬 */
+}
+
+#main{
+    width: 1280px; /* 가로 구역 사이즈 */
+    margin: 0 auto; /* 구역 가로 가운데 정렬 */
+
+}
+
+/* 자주 사용되는 기본CSS */
+*{ box-sizing: border-box; /* content + padding 포함 사이즈 정의 */
+   padding: 0px; margin: 0px; /* 기본여백 제거 */ 
+}
+a{
+    text-decoration: none; /* 하이퍼링크 밑줄 제거 */
+    color: black; /* 하이퍼링크 색상 검정 */
+}
+li{ list-style-type: none;} /* li 항목 글머리 제거 */
