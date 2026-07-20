@@ -4,6 +4,8 @@
         * 매개변수 : 함수호출하는 인자와 함수실행하는 변수 연결
         * 변수 : 하나의 값/자료 저장    , * 인자값 : 함수에 전달하는 값
 */
+
+/*
 // [1] 사용법
 //1. 미리 만들어진함수 : 라이브러리, 각 프로그래밍언어회사에서 제공
 console.log( "함수 ")
@@ -37,15 +39,54 @@ let 결과2 = 수학공식함수( 3, -2 ) // 1 x = 3, y = -2 , 1
 function func2( ) {
     y = 3 + 2
     console.log( 'func2 exe')
-}
+} //f end
 func2( )
 
-//2. 매개변수o , 반환값x
+//2. 매개변수o , 반환값x    예] conosole.log( )
+function func3 ( x ) {
+    console.log( 'func3 exe' ); y = x + 2 }
+func3 ( 10 )
 
-//3. 매개변수o , 반환값o
+*/
+//3. 매개변수o , 반환값o    예] prompt( ) * 반환값이 있는 함수는 반환값을 변수에 저장한다.
+function func4 ( x ) { console.log( 'func4 exe ' ); y = x + 2; return y; }   
+let result4 = func4( 10 );  //  let rusult4 = 12 ( x = 10  , 10+2 )
 
-//4. 매개변수x , 반환값o
+//4. 매개변수x , 반환값x    예] 추후에 다양한 함수들이 사용되는데 내가만든 함수가 아니므로 무엇을 반환하는지 공문서/AI/구글 확인
+function func5( ) { console.log( 'func5 exe '); y = 3 + 2; return y; }
+let result5 = func5();   // let result5 = 5 ( 3 + 2 ) 
+//  ====================================================================================================
+// 1. 지역변수  : if ,for , function 문법 { } 예시 선언(let) 된 변수 , (선언) let a = 10 vs (호출/수정) a = 20
+let 전역변수 = '대한민국' // 1] 해당 변수는 어떠한  { } 포함되는 선언이 아니므로 모든 곳에서 호출 가능
+if (true) {
+    let 지역변수1 = '경기도' // 2] 해당 변수는 if{} 에서 선언된 변수
 
+    console.log(전역변수); // {} 밖으로 나가기는 불가능 하지만 { } 안으로 들어가는건 가능
+    for ( let i = 1 ; i <= 1 ; i++) {
+        let 지역변수2 = '안양시' // 3] 해당 변수는 for{} 에서 선언된 변수
 
+        console.log( 지역변수1 ); // {} 밖x , { } 안 o
+        console.log( 지역변수2 );
+     }
 
+     if (true){
+        let 지역변수3 = '성남시'
+        console.log( 지역변수2 ); // 오류x : { } 밖 x
+     } // if end
+} // if end
+console.log( 전역변수 ) // 오류x : 특정한 { } 선언이 아니므로 사용가능
+// console.log( 지역변수1 ) // 오류o : 지역변수1은 if{} 선언했으므로 그 안에서만 사용가능
+
+// 2. 지역변수2 : if , for와 다르게 function은 return 반환 키워드 이용한 지역변수의 값 아동
+function func6( ) {
+    let 지역변수4 = '수원시';
+    return 지역변수4;
+}
+let 전역변수2 = func6();
+
+// 3. HTML에서 함수 호출 방법
+function func7 ( ) { console.log('func7 exe')}
+// 3.1 : JS에서 함수 호출 방법 : 함수명(매개변수)
+func7( )
+// 3.2 : HTML에서 함수 호출 방법 : <마크업 onClick="JS함수명()" />
 
