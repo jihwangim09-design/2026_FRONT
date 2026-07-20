@@ -1,37 +1,51 @@
+/*
 //실습 1: 성인 인증 함수
 //나이(age)를 매개변수로 받아, 20세 이상이면 true를, 미만이면 false를 반환하는 isAdult 함수를 만드세요. 
 //isAdult(25)와 isAdult(17)의 결과를 각각 콘솔에 출력
 function isAdult(age) {
     if ( age >= 20)
-        console.log ('true')
-    else { false }
-        console.log ('false')
+        console.log ('true');
+    else 
+        console.log ('false');
 }
 isAdult(25)
 isAdult(17)
+*/
 
+/*
+//실습 2: 배열의 총합 구하기
+//숫자로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 모든 요소의 합계를 구하여 반환하는 sumArray 함수를 만드세요.
+const numbers = [10, 20, 30, 40, 50];
+let sum = 0
+function sumArray (numbers)  {
+    for ( i = 0 ; i <= numbers.length - 1 ; i++) {
+        sum+=numbers[i]
+    }
+    console.log( sum )
+}
+sumArray(numbers); 
+*/
 
-/*실습 2: 배열의 총합 구하기
+/*
+//실습 3: 가장 긴 단어 찾기
+//문자열로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 가장 긴 단어를 찾아 반환하는 findLongestWord 함수를 만드세요.
+const words = ['apple', 'banana', 'kiwi', 'strawberry'];
+let max단어 =''
+function findLongestWord ( words ) {
+    for( i = 0 ; i <= words.length - 1 ; i++) 
+    if ( max단어.length < words[i].length) {
+        max단어 = words[i]
+    }
+    console.log(max단어)
+}
+findLongestWord(words)
+*/
 
-숫자로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 모든 요소의 합계를 구하여 반환하는 sumArray 함수를 만드세요. 아래 numbers 배열로 테스트해 보세
-요.
+//실습 4: 게임 점수 관리하기
+//let userScore = 0; 전역 변수를 만드세요. gainScore() 함수는 userScore를 10 증가시키고, loseScore() 함수는 5 감소시킵니다.
+//gainScore()를 세 번, loseScore()를 한 번 호출한 뒤, 최종 점수를 콘솔에 출력하세요.
+let userScore = 0;
 
-const numbers = [10, 20, 30, 40, 50];*/
-
-
-/*실습 3: 가장 긴 단어 찾기
-
-문자열로 이루어진 배열을 매개변수로 받아, for 반복문을 사용해 가장 긴 단어를 찾아 반환하는 findLongestWord 함수를 만드세요. 아래 words 배열로 테스트해 보
-세요.
-
-const words = ['apple', 'banana', 'kiwi', 'strawberry'];*/
-
-
-/*실습 4: 게임 점수 관리하기
-
-let userScore = 0; 전역 변수를 만드세요. gainScore() 함수는 userScore를 10 증가시키고, loseScore() 함수는 5 감소시킵니다.
-
-gainScore()를 세 번, loseScore()를 한 번 호출한 뒤, 최종 점수를 콘솔에 출력하세요.*/
 
 
 /*실습 5: 최고 점수 학생 찾기
