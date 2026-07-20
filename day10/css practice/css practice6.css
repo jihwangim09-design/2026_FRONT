@@ -21,3 +21,23 @@ a{
     color: black; /* 하이퍼링크 색상 검정 */
 }
 li{ list-style-type: none;} /* li 항목 글머리 제거 */
+
+/* [1] header */
+#header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center; /* 하위 요소들 세로 정렬 header 기준 top,main메뉴 리스트들*/
+}
+
+.top-menu{
+    display: flex;
+    justify-content: end; /* end는 오른쪽 정렬 */
+    margin: 10px 0px; /* 10px는 위아래 0px는 좌우*/
+}
+
+.main-menu{
+    display: flex;
+    justify-content: end; /* end는 오른쪽 정렬 */
+    margin: 20px 0px;
+}
