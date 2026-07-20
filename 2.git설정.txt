@@ -1,0 +1,36 @@
+[ 컴퓨터 마다 1번 ]
+1. vscode 왼쪽 사이드바 메뉴 [ 소스 제어 ]
+2. [ window용 git 다운로드 ] 클릭 
+3. 링크 이동 
+4. Standalone Installer
+[ Git for Windows/x64 Setup.] 클릭
+5. 다운로드 실행파일 실행하여 기본값으로 설치
+[next] 클릭 하여 설치 진행 하여 완료
+
+--------------------------------------------------------
+1. vscode 재실행 
+2. 왼쪽 사이드바 메뉴 [ 소스 제어 ]   * 리포지토리( 코드저장소 )
+3. [github에 게시] 클릭 -> 최초1번 로그인 [허용] *vscode 연동 인증*
+4. 해당 연결된 웹페이지에서 로그인 진행 -> [vscode 열기]
+5. private[비공개용] vs pubilc[공개용] repository 선택후 [완료]
+* 커밋( 로컬환경에 변경된 코드 완료 )
+* 푸시( 커밋된 코드들을 GITHUB 저장소 업로드 )
+--------------------------------------------------------
+1. 메시지 : 커밋내용( 협업간의 코드를 업로드한 날짜/이유 작성 )
+ * user.name , user.email 구성 오류 메시지 
+ * vscode 상단메뉴 -> 터미널 -> 새 터미널 -> 
+ * 터미널 오른쪽 상단[+]아이콘 옆에 [v] 클릭 -> [GIT Bash]
+ git config --global user.name   		 	: 현재 커밋자 이름확인
+ git config --global user.name 본인git닉네임
+
+ git config --global user.email				: 현재 커밋자 이메일확인
+ git config --global user.email	본인git이메일 
+2. 메시지 입력후 [커밋] 클릭 
+ * 만약에 최초 GITHUB 사용하는 PC 일 경우 [ Browser ] 클릭 인증 *로컬github인증*
+--------------------------------------------------------
+리포지토리 삭제
+1. 삭제할 리포지토리 웹 주소 접속, https://github.com/itdanja2025/2026B_FRONT
+2. 상단 메뉴에 [Settings] 클릭 
+3. 스크롤 가장 하단에 내리기 -> [Delete this repository]
+작업폴더에 git 연동 제거
+4. 작업 폴더 -> [숨긴항목 보기] -> git 폴더 삭제
