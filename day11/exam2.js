@@ -94,7 +94,7 @@ function 목록선택함수() {
 //예제 9 : input 에서 입력받은 값을 전역 배열에 저장하고 배열 상태를 출력하기
 let 전역배열 = [ ]
 function 등록함수() {
-    // 1. 특정한 마크업 DOm 가져오기
+    // 1. 특정한 마크업 DOM 가져오기
     let 마크업 = document.querySelector('#nameInput')
     // 2. 가져온 마크업DOM의 value 속성 값 가져오기
     let 입력값 = 마크업.value;
