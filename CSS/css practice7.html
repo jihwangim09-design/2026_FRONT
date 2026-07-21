@@ -1,50 +1,231 @@
-<!DOCTYPE html>
-<html lang='ko'>
-<head>
-    <meta charset="UTF-8">
-    <link rel='stylesheet' href='css practice7.css'>
-</head>
-<body>
-    <div id="footer">
-        <div class="footer-inner">
-
-            <div class="top-foot">
-                <ol class="top-menu">
-                    <li><a href="#">The베이킹 소개</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">저작권 소개</a></li>
-                    <li><a href="#">이용안내</a></li>
-                </ol>
-            </div>
 
 
-            <div class="bottom-foot">
-                
-                <div class="left-foot">
-                    <h4>문의전화</h4>
-                    <p>123-1234</p>
-                    <p>10:00 ~ 18:00 (lunch 12:00 ~ 13:00)</p>
-                </div>
+*{
+    box-sizing: border-box; /* content+padding 포함 사이즈 정의 */
+    padding: 0px; margin: 0px;  /* 기본 여백 제거 */
+}
 
-                <div class="center-foot">
-                    <h4>The베이킹</h4>
-                    <p>주소 : 인천광역시 부평구 부평역 123-1234</p>
-                    <p>전화 : 031-123-1234</p>
-                    <p>팩스 : 031-123-1234</p>
-                    <p>이메일 : qweqwe@qweqwe.com</p>
-                </div>
+a{
+    text-decoration: none;  /*  하이퍼링크 민줄 제거 */
+    color: black;
+}
 
-                <div class="right-foot">
-                    <h4>입금정보</h4>
-                    <p>농협 123-123-123456</p>
-                    <p>The베이킹</p>
-                </div>
-                
-            </div>
+li{ list-style-type: none;} /* li 항목 글머리 제거 */
 
-        </div>
-    </div>
-
+#header{
+    width: 1280px;
+    margin: 0  auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+}
+#right-header,#main-menu{
     
-</body>
-</html>
+    justify-content: end;
+}
+#right-header{
+    justify-content: end;
+}
+.top-menu{
+    display: flex;
+    justify-content: end;   /*오른쪽 정렬*/
+    margin: 10px 0px;
+    column-gap: 10px;
+}
+.main-menu{
+    display: flex;
+    justify-content: end;
+    margin: 20px 0px;
+    column-gap: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.top-menu > li {margin-left: 10px;}
+.top-menu > li {margin-left: 10px;}
+
+/* -----------------  메인 부분 ------------- */
+
+#main{
+width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar{
+    width: 230px;
+}
+.title{
+    height: 45px;
+    background-color: #199b90;
+    color: white;
+    padding: 10px;
+}
+.intro{
+    width: 200px;
+    margin: 5px;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.title > h3{
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+.search{
+    margin-bottom: 20px;
+}
+.search > input{
+    width: 160px;
+    height: 25px;
+    border-radius: 10px;
+}
+.search > button{
+    height: 25px;
+}
+.left-menu , .comment{
+    margin-top: 40px;
+    padding: 10px;
+    text-align: left;
+}
+
+.left-menu h4, .comment h4{
+    border-top: 2px solid black;
+    border-bottom: 0.5px solid gray;
+    padding: 10px;
+}
+
+.left-menu li, .comment li{
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{ list-style-type: none; }
+
+.center{
+    width:430px;
+}
+
+.notice{
+    margin-bottom: 60px;
+}
+
+.notice > h3 , .board > h3, .img > h3{
+    border-bottom:2px solid gray;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+
+.list{
+    display:flex;
+    justify-content:space-between;
+    padding:8px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.img{
+    width:560px;
+    
+}
+
+.img-box{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.item{
+    width:260px;
+    margin-bottom:20px;
+}
+
+.item > img{
+    width:100%;
+    display:block;
+}
+
+
+.item > p{
+    margin:8px 0 3px;
+}
+
+.item > span{
+    color:gray;
+    font-size:13px;
+}
+
+/* -------------------------- 푸터 --------------- */
+
+*{ 
+    box-sizing: border-box; 
+    padding: 0px; 
+    margin: 0px; 
+}
+
+#a1 {
+    text-decoration: none; 
+    color: white;
+     
+}
+
+li { 
+    list-style-type: none; 
+}
+
+
+#footer {
+    background-color: #0c334d;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.top-foot {
+    padding-bottom: 15px;
+    margin-bottom: px;
+    
+}
+
+
+.top-menu {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: left;
+}
+
+
+.bottom-foot {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+
+
+#main-img{
+    width: 100%;
+    display:block;
+}
+
+#main-img{
+    width: 100%;
+    height: auto;
+    display:block;
+    background-color: #f6f2e9;
+}
+#ddd{
+    width: 100%;
+    background-color: #f6f2e9;
+}
