@@ -97,7 +97,7 @@ function 등록함수() {
     // 1. 특정한 마크업 DOm 가져오기
     let 마크업 = document.querySelector('#nameInput')
     // 2. 가져온 마크업DOM의 value 속성 값 가져오기
-    let 입력ㄱ밧 = 마크업.value;
+    let 입력값 = 마크업.value;
     // 3. 전역배열에 추가
     전역배열.push( 입력값 )
     // 4. 출력
