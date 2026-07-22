@@ -84,7 +84,7 @@ function findTopStudent ( ) {
 console.log(findTopStudent())
 */
 
-
+/*
 //실습 6: 상품 목록 페이지 만들기
 //전역변수 products 배열 데이터를 이용하여, 각 상품을 소개하는 HTML 요소를 동적으로 만들어 페이지에 표시하는 renderProducts 함수를 만드세요.
 //각 상품은 이름(<h4>), 가격(<p>), 재고(<p>)를 포함한 div로 묶여야 합니다.
@@ -95,19 +95,21 @@ const products = [
 ];
 let html = ''
 function renderProducts() {
-    for ( let i = 0 ; i <= products.length - 1 ; i++)
+    for ( let i = 0 ; i <= products.length - 1 ; i++) {
         html += '<div>';
         html += '<h4>'+ products[i].name + '</h4>';
         html += '<p>가격:' + products[i].price + '</p>';
         html += '<p>재고:' + products[i].stock + '</p>';
         html += '</div>';
+    }
+    document.body.innerHTML = html;
 }
-document.body.innerHTML = html;
-/*실습 7: 간단한 계산기
+renderProducts();
+*/
 
-num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
-
-operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)*/
+//실습 7: 간단한 계산기
+//num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
+//operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)
 
 
 
