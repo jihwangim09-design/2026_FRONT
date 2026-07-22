@@ -136,10 +136,16 @@ function productAdd() {
     // 2. 입력받은 값들을 객체화
         // pcode : 제품식별번호로 사용자가 지정하지 않고 자동번호 부여
         // pdate : 현재 시스템 날짜/시간 함수 , new Date()
-    let object = { ccode : category , pname : name , pprice : price , pimg : image , pcode : finalPcode + 1 }
+        // 현재연도 : new Date().getFullyear() , 현재월(0:1월~11:12월) : new Date.getMonth() , 현재일 : new Date().getDate
+    //console.log( new Date().getFullYear() , new Date().getMonth() , new Date().getDate)
+    let pdate = `${ new Date().getFullYear() } ${ new Date().getMonth()+1 } ${ new Date().getDate() }`
+    let object = { ccode : category , pname : name , pprice : price , pimg : image ,
+                   pcode : finalPcode + 1 }
     console.log( object )
 
     // 3. 배열 저장
+    productList.push ( object );
 
     // 4. 성공
-}
+    alert('등록성공'); productPrint()
+}// f end
