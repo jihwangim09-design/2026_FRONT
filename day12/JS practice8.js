@@ -135,6 +135,7 @@ function productAdd() {
     let price = document.querySelector('.image').files[0] // + 첨부파일은 .file[0] 속성에서 첨부파일의 첫번쨰 자료 가져오기
     // 2. 입력받은 값들을 객체화
         // pcode : 제품식별번호로 사용자가 지정하지 않고 자동번호 부여
+        // pdate : 현재 시스템 날짜/시간 함수 , new Date()
     let object = { ccode : category , pname : name , pprice : price , pimg : image , pcode : finalPcode + 1 }
     console.log( object )
 
