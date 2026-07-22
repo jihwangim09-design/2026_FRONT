@@ -1,6 +1,6 @@
-let departmentList = [ { 'dcode' : 1 , 'dname' : '개발팀'  }, 
-                            { 'dcode' : 2 , 'dname' : '디자인팀' },
-                            { 'dcode' : 3 , 'dname' : '기획팀' }
+let departmentList = [  { 'dcode' : 1 , 'dname' : '개발팀'  }, 
+                        { 'dcode' : 2 , 'dname' : '디자인팀' },
+                        { 'dcode' : 3 , 'dname' : '기획팀' }
                         ]
 let vacationList = [ 
 { 'vcode': 1, 'ecode': 1, 'name': '김민준', 'startDay': '2025-08-04', 'endDay': '2025-08-04', 'reason': '병원 진료' },
