@@ -102,50 +102,49 @@ function productPrint( ){
 // [2] 삭제 함수 , 삭제할 제품코드 매개변수로 받아온다.
 function productDelete( pcode ){
     // 1. 삭제할 pcode의 제품객체를 배열에서 찾는다.
-    for( let index = 0 ; index <= productList.length - 1 ; index++){
-        if (productList[index].pcode == pcode){
+    for( let index = 0 ; index <= productList.length-1 ; index++ ){
+        if( productList[index].pcode == pcode ){
             productList.splice( index , 1 ); // 2. 배열에서 요소 삭제 . splice( 인덱스번호 , 개수 )
             alert('삭제 성공');
             productPrint() // 3. 조회구역 최신화
-            return // 주의할점 구분 : return function{} 탈출 vs break for{} 탈출
-        }
-    }
-} // f end
-
+            return // 주의할점 구분 : return function{}탈출  VS break for{}탈출
+        } // if end 
+    } // for end 
+} // f end 
 // [3] 수정 함수
-function productList ( pcode ){
+function productUpdate( pcode ){
     // 1. 수정할 pcode의 제품객체를 배열에서 찾는다.
-    for (let index = 0 ; index <= productList.length - 1; index++){
-        if (productList[index].pcode == pcdoe ){
+    for( let index = 0 ; index <= productList.length-1 ; index++ ){
+        if( productList[index].pcode == pcode ){
             let newPname = prompt('수정할 제품명 입력하세요.')
             let newPprice = prompt('수정할 가격 입력하세요.')
-            productList[index].pname = newPname // 2, 배열에서 특정한 요소값 수정
+            productList[index].pname = newPname // 2. 배열에서 특정한 요소값 수정 
             productList[index].pprice = newPprice
             productPrint(); return;
-        } //if end
-    } // for end
-} // f end
-// [4] 등록 함수
-let finalPcode = 2 // 현재 마지막으로 사용한 제품코드
-function productAdd() {
-    // 1. 입력받은 값 가져오기
+        } //if end 
+    } // for end 
+} // f end 
+
+// [4] 등록 함수 
+let finalPcode = 2 // 현재 마지막으로 사용한 제품코드 
+function productAdd( ){
+    // 1. 입력받은 값 가져오기 
     let category = document.querySelector('.category').value
     let name = document.querySelector('.name').value
     let price = document.querySelector('.price').value
-    let price = document.querySelector('.image').files[0] // + 첨부파일은 .file[0] 속성에서 첨부파일의 첫번쨰 자료 가져오기
+    let image = document.querySelector('.image').files[0] // + 첨부파일은 .files[0] 속성에서 첨부파일의 첫번째 자료 가져오기 
     // 2. 입력받은 값들을 객체화
-        // pcode : 제품식별번호로 사용자가 지정하지 않고 자동번호 부여
+        // pcode : 제품식별코드로 사용자가 지정하지 않고 *자동번호 부여* , 마지막사용된 제품코드에 + 1
         // pdate : 현재 시스템 날짜/시간 함수 , new Date()
-        // 현재연도 : new Date().getFullyear() , 현재월(0:1월~11:12월) : new Date.getMonth() , 현재일 : new Date().getDate
-    //console.log( new Date().getFullYear() , new Date().getMonth() , new Date().getDate)
-    let pdate = `${ new Date().getFullYear() } ${ new Date().getMonth()+1 } ${ new Date().getDate() }`
-    let object = { ccode : category , pname : name , pprice : price , pimg : image ,
-                   pcode : finalPcode + 1 }
-    console.log( object )
-
-    // 3. 배열 저장
-    productList.push ( object );
-
-    // 4. 성공
-    alert('등록성공'); productPrint()
-}// f end
+            // 현재연도 : new Date().getFullYear()  ,  현재월(0:1월~11:12월) : new Date().getMonth() , 현재일 : new Date().getDate()
+        //console.log( new Date().getFullYear() , new Date().getMonth() , new Date().getDate()  ) 
+    let pdate = `${ new Date().getFullYear() }-${ new Date().getMonth()+1 }-${ new Date().getDate() }`
+    let object = { ccode : category , pname : name , pprice : price , 
+                    pimg : image , 
+                    pcode : finalPcode+1 , pdate : pdate }
+    // 3. 배열 저장  , **마지막 제품코드 1 증가** 
+    productList.push( object ); finalPcode += 1
+    // 4. 성공  , 화면 최신화 
+    alert('등록성공'); 
+    productPrint();
+} // f end 
