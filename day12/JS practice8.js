@@ -125,4 +125,20 @@ function productList ( pcode ){
         } //if end
     } // for end
 } // f end
-// [4] 등록 함수 
+// [4] 등록 함수
+let finalPcode = 2 // 현재 마지막으로 사용한 제품코드
+function productAdd() {
+    // 1. 입력받은 값 가져오기
+    let category = document.querySelector('.category').value
+    let name = document.querySelector('.name').value
+    let price = document.querySelector('.price').value
+    let price = document.querySelector('.image').files[0] // + 첨부파일은 .file[0] 속성에서 첨부파일의 첫번쨰 자료 가져오기
+    // 2. 입력받은 값들을 객체화
+        // pcode : 제품식별번호로 사용자가 지정하지 않고 자동번호 부여
+    let object = { ccode : category , pname : name , pprice : price , pimg : image , pcode : finalPcode + 1 }
+    console.log( object )
+
+    // 3. 배열 저장
+
+    // 4. 성공
+}
