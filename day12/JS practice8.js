@@ -99,8 +99,30 @@ function productPrint( ){
     tbody.innerHTML = html
 } // F END 
 
-// [2] 삭제 함수 
+// [2] 삭제 함수 , 삭제할 제품코드 매개변수로 받아온다.
+function productDelete( pcode ){
+    // 1. 삭제할 pcode의 제품객체를 배열에서 찾는다.
+    for( let index = 0 ; index <= productList.length - 1 ; index++){
+        if (productList[index].pcode == pcode){
+            productList.splice( index , 1 ); // 2. 배열에서 요소 삭제 . splice( 인덱스번호 , 개수 )
+            alert('삭제 성공');
+            productPrint() // 3. 조회구역 최신화
+            return // 주의할점 구분 : return function{} 탈출 vs break for{} 탈출
+        }
+    }
+} // f end
 
 // [3] 수정 함수
-
+function productList ( pcode ){
+    // 1. 수정할 pcode의 제품객체를 배열에서 찾는다.
+    for (let index = 0 ; index <= productList.length - 1; index++){
+        if (productList[index].pcode == pcdoe ){
+            let newPname = prompt('수정할 제품명 입력하세요.')
+            let newPprice = prompt('수정할 가격 입력하세요.')
+            productList[index].pname = newPname // 2, 배열에서 특정한 요소값 수정
+            productList[index].pprice = newPprice
+            productPrint(); return;
+        } //if end
+    } // for end
+} // f end
 // [4] 등록 함수 
