@@ -129,19 +129,26 @@ function productUpdate( pcode ){
 let finalPcode = 2 // 현재 마지막으로 사용한 제품코드 
 function productAdd( ){
     // 1. 입력받은 값 가져오기 
-    let category = document.querySelector('.category').value
+    let category = document.querySelector('.category').value // <select> 마크업의 value는 선택한 <option value> 반환 
     let name = document.querySelector('.name').value
     let price = document.querySelector('.price').value
     let image = document.querySelector('.image').files[0] // + 첨부파일은 .files[0] 속성에서 첨부파일의 첫번째 자료 가져오기 
-    // 2. 입력받은 값들을 객체화
+        // 꼼꼼히!! , 유효성판단/검사
+        if( category == 'disabled') { 
+            alert('카테고리선택해주세요'); 
+            return;  // * 코드의흐름이 return 만나면 아래코드는 생략하고 강제함수종료
+        } 
+        // 2. 입력받은 값들을 객체화 , 중간검사 : console.log() 이용한 변수/자료 출력
         // pcode : 제품식별코드로 사용자가 지정하지 않고 *자동번호 부여* , 마지막사용된 제품코드에 + 1
         // pdate : 현재 시스템 날짜/시간 함수 , new Date()
             // 현재연도 : new Date().getFullYear()  ,  현재월(0:1월~11:12월) : new Date().getMonth() , 현재일 : new Date().getDate()
-        //console.log( new Date().getFullYear() , new Date().getMonth() , new Date().getDate()  ) 
+            // console.log( new Date().getFullYear() , new Date().getMonth() , new Date().getDate()  ) 
     let pdate = `${ new Date().getFullYear() }-${ new Date().getMonth()+1 }-${ new Date().getDate() }`
-    let object = { ccode : category , pname : name , pprice : price , 
-                    pimg : image , 
+    let object = { ccode : category , pname : name , pprice : price ,
+                    // 만약에 첨부파일선택이 없으면(undefined) 기본이미지(https://placehold.co/100) 있으면 선택한첨부파일가상URL 생성 
+                    pimg : image == undefined ? 'https://placehold.co/100' : URL.createObjectURL( image ), // URL.createObjectURL( 객체 ) 객체 (가상)주소 생성
                     pcode : finalPcode+1 , pdate : pdate }
+    console.log( object )
     // 3. 배열 저장  , **마지막 제품코드 1 증가** 
     productList.push( object ); finalPcode += 1
     // 4. 성공  , 화면 최신화 
