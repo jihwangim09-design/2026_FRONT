@@ -93,8 +93,16 @@ const products = [
   { name: '모니터', price: 350000, stock: 12 },
   { name: '키보드', price: 80000, stock: 25 }
 ];
-
-
+let html = ''
+function renderProducts() {
+    for ( let i = 0 ; i <= products.length - 1 ; i++)
+        html += '<div>';
+        html += '<h4>'+ products[i].name + '</h4>';
+        html += '<p>가격:' + products[i].price + '</p>';
+        html += '<p>재고:' + products[i].stock + '</p>';
+        html += '</div>';
+}
+document.body.innerHTML = html;
 /*실습 7: 간단한 계산기
 
 num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
