@@ -1,0 +1,91 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    background-color: #eef1f6;
+}
+
+#wrap {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 0 24px;
+}
+
+.부서관리 {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.부서관리 h2 {
+    font-size: 18px;
+    margin: 0 0 16px;
+}
+
+.부서명입력 {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.deptNameInput {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.created {
+    background-color: #7b5cf0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.created:hover {
+    background-color: #6b4be0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead th {
+    text-align: left;
+    color: #888;
+    font-weight: 500;
+    padding: 8px 4px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+tbody td {
+    padding: 12px 4px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.updateBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    color: #4a72ff;
+    padding: 2px 4px;
+}
+
+.updateBtn1 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    color: #e2453d;
+    padding: 2px 4px;
+}

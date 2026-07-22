@@ -1,4 +1,4 @@
-let departmentStaffList = [ { 'dcode' : 1 , 'dname' : '개발팀'  }, 
+let departmentList = [ { 'dcode' : 1 , 'dname' : '개발팀'  }, 
                             { 'dcode' : 2 , 'dname' : '디자인팀' },
                             { 'dcode' : 3 , 'dname' : '기획팀' }
                         ]
@@ -15,69 +15,66 @@ let employeeList = [
 let finaldcode = 2;
 
 // [1] 전체조회 함수 
-departmentPrint( ) // JS가 열릴때 최초 1번 실행 
-function departmentPrint( ){
-    // 1. 어디에
-    let tbody = document.querySelector( '#depf-body' )
-    // 2. 무엇을 , 배열내 모든 객체(자료) 들을 HTML(문자열)형식 구성
+departmentPrint()
+function departmentPrint() {
+    let tbody = document.querySelector('.deptTbody')
     let html = ""
-    for( let i = 0 ; i <= departmentList.length-1 ; i++ ){
-        let department = departmentList[i] // i번째 제품객체 1개 
-        html += `<tr> 
-                    <td> ${ department.dname} </td> 
-                    <td> <button class="updateBtn" onClick="departmentupdate"( ${ department.dcode } )">수정</button> </td>
-                    <td> <button class="updateBtn1" onClick="departmentdelete"( ${ department.dname } )">삭제</button> </td>
+    for (let i = 0; i <= departmentList.length - 1; i++) {
+        let department = departmentList[i]
+        html += `<tr>
+                    <td>${department.dname}</td>
+                    <td>
+                        <button class="updateBtn" onclick="departmentUpdate(${department.dcode})">수정</button>
+                        <button class="updateBtn1" onclick="departmentDelete(${department.dcode})">삭제</button>
+                    </td>
                  </tr>`
-    } // for end 
-    // 3. 출력 
+    }
     tbody.innerHTML = html
-} // F END 
+}
 
-
-function departmentAdd( ){
-    let input = document.querySelector('.deftname.Input')
+function departmentAdd() {
+    let input = document.querySelector('.deptNameInput')
     let dname = input.value
 
-    if (dname == "")
-    alret('부서명을 입력하세요.')
-    return;
-
-    for ( let i = 0 ; i <= departmentList.length-1 ; i++ ){
-        if (departmentList[i].dname == dname)
-            alert('이미 존재하는 부서입니다.')
-        return;
+    if (dname == "") {
+        alert('부서명을 입력하세요.')
+        return
     }
 
-    let welcomedcode = { dcode: finaldcode+1, dname: dname}
-    departmentList.push(welcomedcode)
+    for (let i = 0; i <= departmentList.length - 1; i++) {
+        if (departmentList[i].dname == dname) {
+            alert('이미 존재하는 부서입니다.')
+            return
+        }
+    }
+
+    let object = { dcode: finaldcode + 1, dname: dname }
+    departmentList.push(object)
     finaldcode += 1
 
     input.value = ""
-
     departmentPrint()
-
 }
 // [3] 수정 함수
-function departmentupdate( dcode ){
-    // 1. 수정할 pcode의 제품객체를 배열에서 찾는다.
-    for( let i = 0 ; i <= departmentList.length-1 ; i++ ){
-        if( departmentList[i].dcode == dcode ){
-            let newdname = prompt('수정할 부서명을 입력하세요.' ,departmentList[i].dname)
-            epartmentList[i].dcode = newdname // 2. 배열에서 특정한 요소값 수정 
-            departmentStaffList[i].dname = newdname
+function departmentUpdate(dcode) {
+    for (let i = 0; i <= departmentList.length - 1; i++) {
+        if (departmentList[i].dcode == dcode) {
+            let newdname = prompt('수정할 부서명을 입력하세요.', departmentList[i].dname)
+            if (newdname == null || newdname == "") { return }
+            departmentList[i].dname = newdname
             departmentPrint()
-            return;
-        } 
-    } 
+            return
+        }
+    }
 }
 
 function departmentDelete(dcode) {
-    for (let i = 0 ; i <= departmentList.length-1 ; i++) {
+    for (let i = 0; i <= departmentList.length - 1; i++) {
         if (departmentList[i].dcode == dcode) {
             departmentList.splice(i, 1)
             alert('삭제 성공')
             departmentPrint()
-            return;
+            return
         }
     }
 }
