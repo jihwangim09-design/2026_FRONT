@@ -124,25 +124,46 @@ calculator(10, 5, '+');
 calculator(10, 5, '-'); 
 */
 
-/*실습 8: HTML 리스트(ul, li) 동적 생성
+/*
+//실습 8: HTML 리스트(ul, li) 동적 생성
+//todoList라는 할 일 목록이 담긴 전역 배열이 있습니다.
+//renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며 <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다..
+//최종적으로 이 문자열을 HTML <ul> 태그로 표현하여 리스트를 화면에 그리시오.
+let todoList = ['장보기', '운동하기']
+let html = ''
 
-todoList라는 할 일 목록이 담긴 전역 배열이 있습니다.
+function renderList() {
+    html = '' //for 안에 넣어서 초기화 해야함 전역으로 하면 계속 누적
+    for( i = 0 ; i <= todoList.length - 1 ; i++) {
+        html += '<li>' + todoList[i] + '</li>' // <li>는 HTML태그라 문자열( '' )로 작성해야함 
+    }
+    document.querySelector('ul').innerHTML = html;
+}
+renderList();
+*/
 
-renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며 <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
 
-최종적으로 이 문자열을 HTML <ul> 태그로 표현하여 리스트를 화면에 그리시오.
+/*
+//실습 9: 입장료 계산 함수
+//임의의 나이(age)를 매개변수로 받아 입장료를 반환하는 getTicketPrice 함수를 만드시오.
+//8세 미만: "무료"
+//8세 이상 19세 이하: "5,000원"
+//20세 이상: "10,000원"
+//계산된 가격 문자열을 반환(return)하시오.
 
-let todoList = ['장보기', '운동하기']*/
+function getTicketPrice(age) {
+    if (age < 8) {
+        return "무료";
+    } else if (age <= 19) {
+        return "5,000원";
+    } else {
+        return "10,000원";
+    }
+}
 
+let age = Number(prompt () );
+let price = getTicketPrice(age);
 
-/*실습 9: 입장료 계산 함수
+console.log(price);
 
-임의의 나이(age)를 매개변수로 받아 입장료를 반환하는 getTicketPrice 함수를 만드시오.
-
-8세 미만: "무료"
-
-8세 이상 19세 이하: "5,000원"
-
-20세 이상: "10,000원"
-
-계산된 가격 문자열을 반환(return)하시오.*/
+*/
