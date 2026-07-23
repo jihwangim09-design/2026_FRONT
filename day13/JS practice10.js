@@ -12,7 +12,7 @@ function signup(){
     console.log( memberList ) // 없으면 null
     if( memberList == null ){ memberList = [ ] } // 최초 등록이면 배열 구성 
     // 마지막인덱스 :  .length-1  , 마지막인덱스 회원번호 + 1
-    let no = memberList.length == 0 ? 1 : memberList[ memberList.length-1 ].no + 1
+    let no = memberList.length == 0 ? 1 : memberList[ memberList.length-1 ].no + 1 //처음이면 no가 0으로 아니면 마지막번호 + 1
     // 2. 객체화 
     let obj = { no , id , pw }; console.log( obj );
     // 3. 배열 저장한다.
