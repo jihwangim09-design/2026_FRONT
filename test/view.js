@@ -4,10 +4,10 @@ function getboard() {
     const selectNo = url.get('no')
 
     let boardList = localStorage.getItem('boardList')
-    if (boardList == null) (boardList = [])
+    if (boardList == null) {boardList = []}
         else {boardList = JSON.parse(boardList)}
 
-    for ( i = 0 ; i <= boardList.length - 1 ; i++) {
+    for ( let i = 0 ; i <= boardList.length - 1 ; i++) {
         const obj = boardList[i]
 
     if ( obj.no == selectNo ) {
@@ -27,7 +27,7 @@ function boardDelete() {
     if (boardList == null) { boardList = [] } 
         else { boardList = JSON.parse(boardList) }
 
-    for ( i = 0 ; i <= boardList.length - 1 ; i++) {
+    for ( let i = 0 ; i <= boardList.length - 1 ; i++) {
         const obj = boardList[i]
 
         if ( obj.no == selectNo ) {
@@ -36,7 +36,7 @@ function boardDelete() {
                 boardList.splice( i, 1)
                 localStorage.setItem('boardList' , JSON.stringify(boardList))
                 alert('삭제성공')
-                location.href = list.html
+                location.href = 'list.html'
             }else{ alert('삭제 실패 비밀번호 불일치')}
         }
     }
@@ -51,7 +51,7 @@ function boardUpdateview() {
     if (boardList == null) { boardList = [] }
         else { boardList = JSON.parse(boardList) }
 
-    for ( i = 0 ; i <= boardList.length - 1 ; i++) {
+    for ( let i = 0 ; i <= boardList.length - 1 ; i++) {
         const obj = boardList[i]
 
         if ( obj.no == selectNo ) {
