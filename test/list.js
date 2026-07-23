@@ -7,7 +7,7 @@ function boardprint() {
         else {boardList = JSON.parse(boardList)}
     
     let html = ''
-    for ( i = 0 ; i <= boardList.length - 1 ; i++) {
+    for (let i = 0 ; i <= boardList.length - 1 ; i++) {
         const obj = boardList[i]
 
 
