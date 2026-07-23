@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 <head>
-
 </head>
 <body>
-    <div> 
-        <h3>회원가입 영역</h3>  
-        <span>아이디 :</span>
-        <input class="signId"> <br>
-        <span>비밀번호 :</span>
-        <input class="signPw"> <br>
-        <button class="btn" onclick="signup()">회원가입</button>
+
+    <div>
+        아이디 : <input class="signId" /> <br/>
+        비밀번호 : <input class="signPw" type="password" /> <br/>
+        <button onclick="signup()">회원가입</button>
+    </div>
+    
+    <div>
+        아이디 : <input class="loginId"/> <br/>
+        비밀번호 : <input class="loginPw" type="password" /> <br/>
+        <button onclick="login()">로그인</button>
     </div>
 
-    <div> 
-        <h3>로그인 영역</h3>
-        <span>아이디 :</span>
-        <input class="loginId"> <br>
-        <span>비밀번호 :</span>
-        <input class="loginPw"> <br>
-        <button class="btn" onclick="login()">로그인</button>
-    </div>
-
-
-    <script src="JS practice10.js"> </script>
+    <script src="js_practice10.js"> </script>
 </body>
 </html>

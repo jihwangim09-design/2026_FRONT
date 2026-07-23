@@ -1,53 +1,45 @@
-// 1. 회원가입 함수
-function signup() {
+// 1. HTML 
+// 2. 메모리 구조 
+// let memberList = [ { no , id, pw } , { no , id , pw } ]
+// 3. 함수
+// [1] signup 함수 , 함수 안에서 선언된 변수는 *지역변수* 이므로 함수가 종료되면 사라진다.
+function signup(){
+    // 1. 입력받은 값 가져오기 
     let id = document.querySelector('.signId').value;
     let pw = document.querySelector('.signPw').value;
+    // [*] localStorage 에 memberList 배열 가져오기 *JSON파싱*
+    let memberList = JSON.parse( localStorage.getItem('memberList') )
+    console.log( memberList ) // 없으면 null
+    if( memberList == null ){ memberList = [ ] } // 최초 등록이면 배열 구성 
+    // 마지막인덱스 :  .length-1  , 마지막인덱스 회원번호 + 1
+    let no = memberList.length == 0 ? 1 : memberList[ memberList.length-1 ].no + 1
+    // 2. 객체화 
+    let obj = { no , id , pw }; console.log( obj );
+    // 3. 배열 저장한다.
+    memberList.push( obj ); console.log( memberList );
+    // 4. 성공처리
+    alert('등록 성공');
+    // [*] localStorage 에 memberList 배열 저장하기 
+    localStorage.setItem( 'memberList' , JSON.stringify( memberList ) )
+} // f end
 
-    // localStorage에서 기존 데이터 가져오기
-    let memberString = localStorage.getItem('memberList');
-    let memberList = [];
-    if (memberString != null) {
-        memberList = JSON.parse(memberString);
-    }
-
-    // 번호(no) 자동 부여 (마지막 번호 + 1)
-    let no = 1;
-    if (memberList.length > 0) {
-        no = memberList[memberList.length - 1].no + 1;
-    }
-
-    // 객체 생성 및 배열에 추가
-    let newMember = { 'no': no, 'id': id, 'pw': pw };
-    memberList.push(newMember);
-
-    // localStorage에 문자열로 변환하여 저장
-    localStorage.setItem('memberList', JSON.stringify(memberList));
-    
-    alert('회원가입이 완료되었습니다.');
-    document.querySelector('.signId').value = '';
-    document.querySelector('.signPw').value = '';
-}
-
-// 2. 로그인 함수
-function login() {
-    let id = document.querySelector('.loginId').value;
-    let pw = document.querySelector('.loginPw').value;
-
-    // localStorage에서 기존 데이터 가져오기
-    let memberString = localStorage.getItem('memberList');
-    let memberList = [];
-    if (memberString != null) {
-        memberList = JSON.parse(memberString);
-    }
-
-    // 배열을 돌면서 아이디와 비밀번호 비교
-    for (let i = 0; i < memberList.length; i++) {
-        if (memberList[i].id == id && memberList[i].pw == pw) {
-            alert('로그인 성공');
-            return; 
+// [2] login 함수 , 자료 단순 비교  
+function login( ){
+    // 1. 입력받은 값 가져오기 
+    let id = document.querySelector('.loginId').value 
+    let pw = document.querySelector('.loginPw').value
+    // 2. 입력받은 값이 배열내 정보 와 비교 
+    // [*] localStorage 기존 배열 가져온다. 
+    let memberList = JSON.parse( localStorage.getItem( 'memberList') ) ;
+    if( memberList != null ){ 
+        for( let i = 0 ; i <= memberList.length - 1 ; i++ ){
+            if( memberList[i].id == id && memberList[i].pw == pw ){
+                alert('로그인 성공');
+                return;
+            }
         }
     }
+    alert(' 동일한 회원정보가 없습니다. ')
+}// f end 
 
-    // 일치하는 정보가 없을 경우
-    alert('동일한 회원정보가 없습니다. 로그인 실패');
-}
+// * 코드가 변경될 때 마다 자동 저장 되면서 라이브서버 재실행되면 초기화*
