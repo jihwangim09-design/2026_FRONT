@@ -4,7 +4,7 @@ function boardprint() {
 
     let boardList = localStorage.getItem('boardList')
     if( boardList == null ) {boardList = []} 
-        else (boardList = JSON.parse(boardList))
+        else {boardList = JSON.parse(boardList)}
     
     let html = ''
     for ( i = 0 ; i <= boardList.length - 1 ; i++) {
