@@ -24,7 +24,7 @@ function boardDelete() {
     const selectNo = url.get('no')
 
     let boardList = localStorage.getItem('boardList')
-    if (boardList == null) ( boardList = [] )
+    if (boardList == null) { boardList = [] } 
         else { boardList = JSON.parse(boardList) }
 
     for ( i = 0 ; i <= boardList.length - 1 ; i++) {
@@ -48,7 +48,7 @@ function boardUpdateview() {
     const selectNo = url.get('no')
 
     let boardList = localStorage.getItem('boardList')
-    if (boardList == null) ( boardList = [] )
+    if (boardList == null) { boardList = [] }
         else { boardList = JSON.parse(boardList) }
 
     for ( i = 0 ; i <= boardList.length - 1 ; i++) {
