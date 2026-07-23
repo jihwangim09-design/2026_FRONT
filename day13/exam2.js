@@ -68,6 +68,7 @@ function 타이머함수(){
     time++;
     document.querySelector('#box3').innerHTML = time
 } // f end
+
 function 타이머종료(){
     clearInterval (timeInter)
 } // f end
