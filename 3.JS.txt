@@ -138,3 +138,4 @@ function sum( ){ }              sum( )
         7) .classList                       : 마크업DOM 객체내 class 목록 반환 
         8) .toggle( "클래스명" )             : 마크업DOM 객체내 특정한 class 추가/삭제 
         9) .remove( )                       : 마크업DOM 객체 삭제
+
