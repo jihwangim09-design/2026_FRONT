@@ -107,11 +107,22 @@ function renderProducts() {
 renderProducts();
 */
 
+/*
 //실습 7: 간단한 계산기
 //num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
-//operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)
+//operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오.
+//(if문 사용)
+function calculator(num1, num2, operator) {
+    if (operator === '+') {
+        console.log(num1 + num2);
+    } else if (operator === '-') {
+        console.log(num1 - num2);
+    }
+}
 
-
+calculator(10, 5, '+');
+calculator(10, 5, '-'); 
+*/
 
 /*실습 8: HTML 리스트(ul, li) 동적 생성
 
