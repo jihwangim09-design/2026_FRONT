@@ -1,1 +1,17 @@
 *{ border: 1px solid red;}
+
+#main{
+    height: 500px;
+    background-color: rgb(241, 240, 240);
+    position: relative;
+}
+
+#원{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 390px;
+    left: 1050px;
+    border-radius: 100%;
+    background-color: black;
+}
