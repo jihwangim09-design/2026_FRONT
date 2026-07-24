@@ -10,11 +10,27 @@
 
 .box2{
     /* 요소 배치 순서 : static(기본값임 정적이라는 의미) , 위치 변경 불가능 */
-    position: static;
-    left: 50px;
+    position: static; /* position은 위치를 뜻함 
+    left: 50px; /* 적용 안된다 정적이기 떄문* /
+}
 
 .box3{
-    position: relative;
-    top: 50px;
+    position: relative; /*상대(원래있던자리기준) 위치 */
+    top: 50px; /* top 위에서부터 50px 아래로 이동 위로가는게 아니라 아래로 이동함 */
+    left: 50px; /* 왼쪽에서부터 50px 오른쪽으로 이동
+                left가 왼쪽으로 가는게 아니라 오른쪽으로 감
+                -(음수)50px면 왼쪽으로 감*/
+     
 }
+
+.box4{
+    position: absolute; /* 절대(가장가까운position의 상위 요소를 기준으로 잡음)위치 
+                    box4 기준으로 가장가까운positon은 body임 */
+    top: 50px; left: 50px;
+}
+
+.box5{
+    position: fixed; /* fixed 화면 위치 고정 스크롤바 내리거나 양옆으로 움직여도 그대로 있음*/
+    bottom: 50px; /* 위로 50px 이동 -(음수)면 아래로 이동 */
+    right: 50px; /* 오른쪽에서 왼쪽으로 50px이동 음수면 오른쪽으로 이동 */
 }
