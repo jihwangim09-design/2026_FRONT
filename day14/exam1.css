@@ -1,0 +1,20 @@
+/*
+    position
+*/
+.box{
+    width: 100px; height: 100px;
+    background-color: yellow;
+    border: 1px solid red;
+
+}
+
+.box2{
+    /* 요소 배치 순서 : static(기본값임 정적이라는 의미) , 위치 변경 불가능 */
+    position: static;
+    left: 50px;
+
+.box3{
+    position: relative;
+    top: 50px;
+}
+}
