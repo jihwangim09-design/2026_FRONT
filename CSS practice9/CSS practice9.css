@@ -1,0 +1,23 @@
+*{ border: 1px solid red;}
+.main{
+    background-color: red;
+    height: 600px;
+    position: relative;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    width: 120px;
+    height: 80px;
+    border-radius: 15px;   
+    position: absolute;
+}
+.box1 { left: 500px; top: 70px;}
+.box2 { left: 300px; top: 150px;}
+.box3 { left: 700px; top: 150px;}
+.box4 { left: 300px; top: 350px;}
+.box5 { left: 700px; top: 350px;}
+.box6 { left: 500px; top: 455px;}
