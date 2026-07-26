@@ -1,21 +1,37 @@
-*{ border: 1px solid red;}
 
-#main{
-    width: 500px;
-    height: 500px;
-    background-color: rgb(241, 240, 240);
-    position: relative;
+li { list-style-type: none; padding: 0; margin: 0; }
+
+.gray-box {
+    width: 600px; 
+    height: 500px; 
+    background-color: #ececec; 
+    position: relative; 
+    margin: 50px;
 }
 
-#원{
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    top: 410px;
-    left: 410px;
-    border-radius: 100%;
-    background-color: black;
-    box-shadow: 0px 5px 15px 2px gray;
 
-    
+.menu-container {
+    position: absolute;
+    bottom: 30px;
+    right: 30px; 
 }
+
+.sub-menu { display: none; padding: 0; margin-bottom: 20px; }
+
+.sub-menu li {
+    width: 50px; height: 50px; 
+    background-color: white; 
+    border-radius: 100%; margin-bottom: 10px; 
+    text-align: center; line-height: 50px; 
+    font-size: 12px; font-weight: bold; color: blue;
+}
+
+
+.main-btn {
+    width: 60px; height: 60px; background-color: #222; color: white;
+    border-radius: 100%; text-align: center; line-height: 60px;
+    font-size: 30px; margin: 0 auto;
+}
+
+
+.menu-container:hover .sub-menu { display: block; }
