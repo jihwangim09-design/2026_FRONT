@@ -1,0 +1,21 @@
+.box{
+    border: 1px solid red;
+    padding: 10px; margin-bottom: 100px;
+}
+.size1{ width: 200px; height: 200px;}
+
+/* width 사이즈 설정 하지 않으면 기본값은 (상위요소)100% 이다. */
+.size2{ min-width: 600px;} /* 최소 가로사이즈 설정 : 만일 600px 보다 작아지면 고정
+(웹페이지 양옆으로 늘리고 줄일때 줄어들면 텍스트가 점점 옆으로 길어지다가 
+600px보다 작아지면 텍스트가 줄지 않고 잘린다) %나 vw 많이 쓴다. */
+.size3{ max-width: 600px;} /* 최대 가로사이즈 설정 : 만일 600px 보다 커지면 고정
+
+/* 하위 요소들의 컨텐츠(텍스트) 넘쳤을 때 */
+.size4{ width: 200px; height: 50px; overflow: visible; } /* visible(기본값) 그대로 보여줌 
+텍스트칸 밖으로 새어나옴 */
+.size5{ width: 200px; height: 50px; overflow: hidden; } /* hidden 넘치면 숨김 
+텍스트가 잘린것처럼 나오지않음 */
+.size6{ width: 200px; height: 50px; overflow: scroll; } /* scroll 스크롤 표시 */
+.size7{ width: 200px; height: 50px; overflow-y: scroll; } /* y축에만 scroll 스크롤 표시 */
+
+
