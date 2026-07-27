@@ -1,0 +1,133 @@
+<제목 및 문단>
+1. <!-- 주석 -->  : 출력 결과 에는 보이지 않지만, 코드를 설명하기 위한 메모
+
+2. <HTML> : HTML 모든 마크업들을 전체를 감싼 마크업
+
+3. <head> : HTML 문서의 옵션 정보 마크업 감싼 마크업 
+
+4. <title> : HTML 문서의 페이지 제목 
+
+5. <link href="css파일경로" rel="stylesheet"> : HTML 문서의 CSS 포함
+
+6. <script src="JS파일경로"> : HTML 문서의 JS 포함 
+
+7. <body> : HTML 문서의 본문 
+
+8. <h1> ~ <h6> : 제목(Head) 마크업 , 글자크기/굵게/구역 의미 담고 있다.
+
+9. <p> </p> : 문단(Paragraph) 마크업 , 구역 의미
+
+10. <br /> : break rule, 줄바꿈 의미
+
+11. <hr /> : horiztontal rule , 가로선 의미
+
+12. <span> : 글자 단위 / inline / 부분 강조
+
+13. <div> : 영역 단위 / block / 레이아웃 구성
+
+<목록 및 링크>
+1. <ol> : order list , 순서(번호)있는 목록
+
+2. <ul> : unorder list , 순서(번호)없는 목록
+
+3. <li> : ol 또는 li 마크업안에 포함되는 마크업으로 목록의 항목
+
+4. <a> : html/페이지 이동 
+
+    <a href="이동할경로" > 텍스트 </a>
+
+    <a href="이동할경로" target="_blank"> 텍스트 </a> : 새 창/탭 열기
+
+5. 상대경로 : 현재 파일 기준(상대적)으로 부터의 경로
+    현재 위치에서 호출할 파일의 경로 표현 방식 
+    의미
+        ./ : 현재경로 뜻 , 생략 가능 , "./1.html" == "1.html"
+
+        ../ : 상위폴더 이동 뜻
+
+6. 절대경로 : 절대(고정된) 기준으로 부터의 경로
+    파일 위치의 전체 경로 표현 방식 
+
+
+<이미지및동영상>
+1. <img /> : 이미지 마크업
+
+2. <audio> </audio> : 오디오 마크업
+
+3. <video> </video> : 비디오 마크업
+
+4. <iframe> : 다른 웹페이지나 외부 콘텐츠를 내 페이지 안에 포함
+
+
+<입력폼>
+1. <input> : 입력 상자
+        (1) type : 입력 방법
+
+            type = "text"           : 문자 입력 , type 생략시 기본값 
+
+            type = "password"       : 가려진 문자 입력 
+
+            type = "file"           : 첨부파일 입력 *multiple속성 : 다중선택 
+
+            type = "radio"          : 단일선택의 선택상자 * name 속성값이 동일
+
+            type = "checkbox"       : 복수선택의 선택상자 
+
+            type = "number"         : 숫자 입력 
+
+            type = "date"           : 날짜 선택
+
+            type = "datetime-local" : 날짜/시간 선택 
+
+            type = "time"           : 시간 선택 
+
+            type = "month"          : 월 선택 
+
+            type = "week"           : 주 선택 
+
+            type = "range"          : 범위 스크롤 
+
+            type = "submit"         : 폼 전송
+
+            type = "reset"          : 폼 초기화
+
+            type = "button"         : 일반 버튼 vs <button type="button"> </button>
+
+        (2) name        : 동일한 마크업명 간의 식별 이름
+
+        (3) value       : 입력상자에 데이터
+
+        (4) disabled    : 비활성화(사용금지)
+
+        (5) readonly    : 수정불가능(수정금지)
+
+        (6) maxlength   : 최대 글자수 제한
+
+        (7) autofocus   : 지정한 입력상자의 포커스(마우스커서) 설정
+
+        (8) placeholder : 입력상자의 가이드텍스트
+
+
+    2. <button> : 버튼 마크업 , 추후에 자바스크립트의 함수연동
+
+
+<테이블>
+    1. 테이블
+
+        <table> : 전체 표를 감싼 마크업
+
+        <tr> : 테이블 행/가로 
+
+        <th> : 테이블 제목(열/세로) 셀/칸
+
+        <td> : 테이블 데이터(열/세로) 셀/칸
+
+        *주요 속성
+
+            boarder = "1" : 테이블 테두리
+
+            style="border-collapse : collapse;" : 이중 테두리를 하나의 테두리로 변경 
+
+            rowspan = "행병합" 
+
+            colspan = "열병합"
