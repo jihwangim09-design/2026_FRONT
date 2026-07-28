@@ -1,5 +1,5 @@
 *{
-    border: 1px solid red;
+    
     box-sizing: border-box;
     padding: 0px; margin: 0px;
         
@@ -17,7 +17,7 @@ body{
 }
 
 .Wrap{
-    width: 1280px;
+    
     margin: 0 auto;
 }
 
@@ -46,6 +46,11 @@ body{
     position: relative;
 }
 
+.banner > img{
+    width: 100%;
+    position: relative;
+}
+
 .banner > span{
     position: absolute;
     top : 50px;
@@ -62,17 +67,107 @@ body{
 }
 
 .main{
-    width: 800px;
-    height: 800px;
+    width: 1000px;
     margin: 0 auto;
-
-
 }
 
-.main-text{
-    margin-top: 30px;
+.m1{
+    display: block;
+    margin-top: 40px;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.box-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box{
+    background-color: beige;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+    
+}
+
+.bt{
+    display: block;
+    font-size: 20px;
+    margin: 0px 0px 10px;
+}
+.bt1{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.innerbox{
+    display: flex;
+}
+
+.bt1{
+    margin-top: 4px;
+}
+.rolebox{
+    background-color: #6e7c8c;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.text-wrap{
+    margin-top: 50px;
+}
+
+.m2{
     font-size: 30px;
 }
-.자격증{
-    width: 50px;
+
+.line{
+    border: none;
+    border-top: 2px solid #b1afaf;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.boxwrap1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box4{
+    margin-top: 20px;
+    width: 450px;
+    height: 60px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box5{
+    margin-top: 20px;
+    width: 450px;
+    height: 60px;
+    background-color: #6e7c8c;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
