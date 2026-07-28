@@ -17,7 +17,7 @@
 .img4{ object-fit: none;} /* 이미지 사이즈 조정 없이 그대로 출력
 약간 확대한 느낌? 가운데부분만 잘나오고 나머지 다짤려서 나옴 */
 
-.img5{ object-fit: cover; object-position: left ;} /* 아까 cover
+.img5{ object-fit: cover; object-position: left;} /* 아까 cover
 하면 비율 맞추면서 짤린 부분을 왼쪽 오른쪽 위 등 이동시킬수있음 */
 
 .img6{ object-fit: contain; object-position: right;} /* 전체 영역이
