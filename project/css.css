@@ -7,7 +7,12 @@
 
 a{ text-decoration: none; color: black;}
 
-#header{
+li{ 
+    list-style-type: none;
+    padding: 20px;
+}
+
+.header{
     width: 1280px;
     margin: 0 auto;
     display: flex;
@@ -15,8 +20,18 @@ a{ text-decoration: none; color: black;}
     align-items: center;
 }
 
-#header-list{
+.logo > img{
+    width: 300px;
+}
+
+.header-list{
     display: flex;
     justify-content: end;
+    padding: 30px;
+}
+
+.img1{
+    width: 1280px;
+    height: 150px;
 }
 
