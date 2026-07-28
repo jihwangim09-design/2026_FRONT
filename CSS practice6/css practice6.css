@@ -1,4 +1,5 @@
 /* 전체 레이아웃 확인 => 추후에 완성후 제거 예정*/
+*{ border: 1px solid red;}
 
 
 #header{
