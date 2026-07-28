@@ -12,9 +12,17 @@ li{
     padding: 20px;
 }
 
-.header{
+body{
+    background-color: #E0E7E9;
+}
+
+.Wrap{
     width: 1280px;
     margin: 0 auto;
+}
+
+.header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,12 +34,32 @@ li{
 
 .header-list{
     display: flex;
-    justify-content: end;
-    padding: 30px;
+    justify-content: flex-end;
+    padding: 0px;
+}
+
+.banner{
+    position: relative;
+}
+
+.banner > span{
+    position: absolute;
+    top : 50px;
+    left: 70px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .img1{
-    width: 1280px;
+    width: 100%;
     height: 150px;
+    object-fit: cover; object-position: bottom;
 }
 
+.main{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+
+
+}
