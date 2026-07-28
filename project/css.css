@@ -23,13 +23,16 @@ body{
 
 .header{
     width: 100%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: beige;
 }
 
 .logo > img{
     width: 300px;
+    padding-top: 15px;
 }
 
 .header-list{
@@ -64,4 +67,12 @@ body{
     margin: 0 auto;
 
 
+}
+
+.main-text{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.자격증{
+    width: 50px;
 }
