@@ -192,7 +192,10 @@ body{
 .fm{
     display: flex;
     justify-content: space-between;
-    
+}
+
+.fm a{
+    color: white;
 }
 
 .sns {
